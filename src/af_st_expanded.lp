@@ -470,13 +470,12 @@ defeated(X) :- in(Y), att(Y,X).
 :- out(X), not defeated(X).
 
 
+#project in(a15).
+#project in(a14).
+#project in(a17).
+#project in(a16).
+#project in(a19).
+#project in(a18).
 
 
 #show in/1.
-
-:- not in(a16).
-:- not in(a18).
-:- in(a15).
-:- in(a14).
-:- in(a17).
-:- in(a19).
