@@ -1,0 +1,9 @@
+#following content in gitignore
+# Ignore lib folder
+lib/
+# Ignore IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
