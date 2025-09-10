@@ -1,0 +1,61 @@
+
+#New directory lib
+mkdir /mnt/project/lib
+python3 -m venv myenv
+
+#Install clingo version 
+python3 -m venv clingoenv
+source clingoenv/bin/activate
+pip install clinguin
+
+#Install command line version of clingo
+sudo apt install gringo
+
+#Install fasb
+sudo apt install curl build-essential
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+
+sudo apt install cmake
+
+git clone https://github.com/drwadu/fasb.git
+mv fasb fasb_normal
+git clone https://github.com/drwadu/fasb.git
+mv fasb fasb_interp
+cd fasb_normal 
+cargo build -r
+cd ..
+cd fasb_interp
+cargo build -r --features interpreter
+
+
+#Export path for normal
+export PATH="/mnt/project/lib/fasb_normal/target/release:$PATH"
+
+#Export path for fasb_interp
+
+export PATH="/mnt/project/lib/fasb_interp/target/release:$PATH"
+
+cd /mnt/project
+git init
+nano .gitignore
+#following content in gitignore
+# Ignore lib folder
+lib/
+# Ignore IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+git add .
+git commit -m "Initial commit with interpreter feature build"
+git remote add origin https://github.com/choupara/epasufr.git
+git push -u origin master
+
+
+
+
+
+
+
