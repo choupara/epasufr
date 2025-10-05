@@ -1,0 +1,14 @@
+
+Choose the type of limit you want to set:
+1. Limit by number of answer sets
+2. Limit by time (seconds)
+3. No limits (run to completion)
+Enter your choice (1, 2, or 3): Enter maximum time in seconds: Main started: 2025-10-05 17:42:27.972128
+Do you want to enable navigation mode? (y/n): 
+Projected atoms extracted: ['put(7,9,10)']
+checking limit type= 2  and limit value= 1600
+answer_set: [put(0,6,7), put(1,7,10), put(2,1,9), put(3,9,10), put(4,7,8), put(5,3,10), put(6,8,9), put(7,1,21), put(8,9,20), put(9,10,19), put(10,19,20), put(11,20,21), put(12,1,18), put(13,9,17), put(14,17,18), put(15,1,16), put(16,15,18), put(17,16,17), put(18,17,18), put(19,9,21), put(20,15,20), put(21,18,19), put(22,19,20), put(23,20,21), put(24,9,10), put(25,10,15), put(26,3,14), put(27,14,15), put(28,10,13), put(29,12,15), put(30,13,14), put(31,14,15), put(32,3,12), put(33,12,15), put(34,11,14), put(35,14,15), put(36,12,13), put(37,10,15), put(38,13,14), put(39,14,15), put(40,10,11), put(41,2,15)]
+INSIDE facet_processing
+INSIDE generate_constraints
+INSIDE create_modified_program
+INSIDE execute_fasb

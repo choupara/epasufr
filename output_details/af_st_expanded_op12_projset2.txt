@@ -1,0 +1,81 @@
+
+Choose the type of limit you want to set:
+1. Limit by number of answer sets
+2. Limit by time (seconds)
+3. No limits (run to completion)
+Enter your choice (1, 2, or 3): Do you want to enable navigation mode? (y/n): 
+Projected atoms extracted: ['in(a15)', 'in(a14)', 'in(a17)', 'in(a16)', 'in(a19)', 'in(a18)', 'in(a12)', 'in(a13)', 'in(a10)', 'in(a11)']
+
+Total answer sets found: 12
+
+Facet Count Processing:
+
+✅ Answer Set 1: [in(a1), in(a100), in(a105), in(a107), in(a11), in(a12), in(a120), in(a123), in(a129), in(a131), in(a137), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a18), in(a19), in(a21), in(a25), in(a26), in(a29), in(a3), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a51), in(a55), in(a57), in(a59), in(a6), in(a64), in(a67), in(a7), in(a70), in(a77), in(a79), in(a82), in(a89), in(a90), in(a93)]
+Included Projected Atoms:  ['in(a16)', 'in(a19)', 'in(a18)', 'in(a12)', 'in(a11)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a14)', 'in(a17)', 'in(a13)', 'in(a10)']
+Facet Count:  4
+
+✅ Answer Set 2: [in(a1), in(a100), in(a105), in(a107), in(a11), in(a12), in(a120), in(a123), in(a129), in(a131), in(a137), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a17), in(a19), in(a21), in(a25), in(a26), in(a29), in(a3), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a51), in(a55), in(a57), in(a59), in(a6), in(a64), in(a67), in(a7), in(a70), in(a77), in(a79), in(a82), in(a89), in(a90), in(a93)]
+Included Projected Atoms:  ['in(a17)', 'in(a16)', 'in(a19)', 'in(a12)', 'in(a11)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a14)', 'in(a18)', 'in(a13)', 'in(a10)']
+Facet Count:  4
+
+✅ Answer Set 3: [in(a1), in(a100), in(a105), in(a107), in(a108), in(a11), in(a120), in(a123), in(a129), in(a13), in(a131), in(a137), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a18), in(a19), in(a21), in(a25), in(a26), in(a29), in(a3), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a51), in(a55), in(a57), in(a59), in(a6), in(a64), in(a67), in(a69), in(a7), in(a77), in(a79), in(a82), in(a89), in(a90), in(a93)]
+Included Projected Atoms:  ['in(a16)', 'in(a19)', 'in(a18)', 'in(a13)', 'in(a11)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a14)', 'in(a17)', 'in(a12)', 'in(a10)']
+Facet Count:  2
+
+✅ Answer Set 4: [in(a1), in(a100), in(a105), in(a107), in(a108), in(a11), in(a120), in(a123), in(a129), in(a13), in(a131), in(a137), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a17), in(a19), in(a21), in(a25), in(a26), in(a29), in(a3), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a51), in(a55), in(a57), in(a59), in(a6), in(a64), in(a67), in(a69), in(a7), in(a77), in(a79), in(a82), in(a89), in(a90), in(a93)]
+Included Projected Atoms:  ['in(a17)', 'in(a16)', 'in(a19)', 'in(a13)', 'in(a11)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a14)', 'in(a18)', 'in(a12)', 'in(a10)']
+Facet Count:  2
+
+✅ Answer Set 5: [in(a1), in(a100), in(a105), in(a107), in(a11), in(a12), in(a120), in(a123), in(a126), in(a129), in(a131), in(a137), in(a140), in(a143), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a18), in(a20), in(a21), in(a25), in(a26), in(a29), in(a3), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a55), in(a57), in(a59), in(a6), in(a64), in(a67), in(a7), in(a70), in(a77), in(a79), in(a82), in(a89), in(a90), in(a93)]
+Included Projected Atoms:  ['in(a16)', 'in(a18)', 'in(a12)', 'in(a11)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a14)', 'in(a17)', 'in(a19)', 'in(a13)', 'in(a10)']
+Facet Count:  4
+
+✅ Answer Set 6: [in(a1), in(a100), in(a105), in(a107), in(a11), in(a12), in(a120), in(a123), in(a126), in(a129), in(a131), in(a137), in(a140), in(a143), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a17), in(a20), in(a21), in(a25), in(a26), in(a29), in(a3), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a55), in(a57), in(a59), in(a6), in(a64), in(a67), in(a7), in(a70), in(a77), in(a79), in(a82), in(a89), in(a90), in(a93)]
+Included Projected Atoms:  ['in(a17)', 'in(a16)', 'in(a12)', 'in(a11)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a14)', 'in(a19)', 'in(a18)', 'in(a13)', 'in(a10)']
+Facet Count:  4
+
+✅ Answer Set 7: [in(a1), in(a100), in(a105), in(a107), in(a108), in(a11), in(a120), in(a123), in(a126), in(a129), in(a13), in(a131), in(a137), in(a140), in(a143), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a18), in(a20), in(a21), in(a25), in(a26), in(a29), in(a3), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a55), in(a57), in(a59), in(a6), in(a64), in(a67), in(a69), in(a7), in(a77), in(a79), in(a82), in(a89), in(a90), in(a93)]
+Included Projected Atoms:  ['in(a16)', 'in(a18)', 'in(a13)', 'in(a11)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a14)', 'in(a17)', 'in(a19)', 'in(a12)', 'in(a10)']
+Facet Count:  2
+
+✅ Answer Set 8: [in(a1), in(a100), in(a105), in(a107), in(a108), in(a11), in(a120), in(a123), in(a126), in(a129), in(a13), in(a131), in(a137), in(a140), in(a143), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a17), in(a20), in(a21), in(a25), in(a26), in(a29), in(a3), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a55), in(a57), in(a59), in(a6), in(a64), in(a67), in(a69), in(a7), in(a77), in(a79), in(a82), in(a89), in(a90), in(a93)]
+Included Projected Atoms:  ['in(a17)', 'in(a16)', 'in(a13)', 'in(a11)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a14)', 'in(a19)', 'in(a18)', 'in(a12)', 'in(a10)']
+Facet Count:  2
+
+✅ Answer Set 9: [in(a1), in(a10), in(a100), in(a103), in(a105), in(a107), in(a115), in(a12), in(a120), in(a123), in(a129), in(a131), in(a132), in(a137), in(a14), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a18), in(a19), in(a21), in(a25), in(a26), in(a29), in(a3), in(a31), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a51), in(a55), in(a57), in(a59), in(a6), in(a65), in(a67), in(a69), in(a7), in(a77), in(a79), in(a80), in(a82), in(a89), in(a90), in(a93), in(a95)]
+Included Projected Atoms:  ['in(a14)', 'in(a16)', 'in(a19)', 'in(a18)', 'in(a12)', 'in(a10)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a17)', 'in(a13)', 'in(a11)']
+Facet Count:  2
+
+✅ Answer Set 10: [in(a1), in(a10), in(a100), in(a103), in(a105), in(a107), in(a115), in(a12), in(a120), in(a123), in(a129), in(a131), in(a132), in(a137), in(a14), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a17), in(a19), in(a21), in(a25), in(a26), in(a29), in(a3), in(a31), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a51), in(a55), in(a57), in(a59), in(a6), in(a65), in(a67), in(a69), in(a7), in(a77), in(a79), in(a80), in(a82), in(a89), in(a90), in(a93), in(a95)]
+Included Projected Atoms:  ['in(a14)', 'in(a17)', 'in(a16)', 'in(a19)', 'in(a12)', 'in(a10)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a18)', 'in(a13)', 'in(a11)']
+Facet Count:  2
+
+✅ Answer Set 11: [in(a1), in(a10), in(a100), in(a103), in(a105), in(a107), in(a115), in(a12), in(a120), in(a123), in(a126), in(a129), in(a131), in(a132), in(a137), in(a14), in(a140), in(a143), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a18), in(a20), in(a21), in(a25), in(a26), in(a29), in(a3), in(a31), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a55), in(a57), in(a59), in(a6), in(a65), in(a67), in(a69), in(a7), in(a77), in(a79), in(a80), in(a82), in(a89), in(a90), in(a93), in(a95)]
+Included Projected Atoms:  ['in(a14)', 'in(a16)', 'in(a18)', 'in(a12)', 'in(a10)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a17)', 'in(a19)', 'in(a13)', 'in(a11)']
+Facet Count:  2
+
+✅ Answer Set 12: [in(a1), in(a10), in(a100), in(a103), in(a105), in(a107), in(a115), in(a12), in(a120), in(a123), in(a126), in(a129), in(a131), in(a132), in(a137), in(a14), in(a140), in(a143), in(a145), in(a16), in(a160), in(a161), in(a162), in(a163), in(a17), in(a20), in(a21), in(a25), in(a26), in(a29), in(a3), in(a31), in(a33), in(a34), in(a38), in(a39), in(a43), in(a44), in(a49), in(a55), in(a57), in(a59), in(a6), in(a65), in(a67), in(a69), in(a7), in(a77), in(a79), in(a80), in(a82), in(a89), in(a90), in(a93), in(a95)]
+Included Projected Atoms:  ['in(a14)', 'in(a17)', 'in(a16)', 'in(a12)', 'in(a10)']
+Excluded Projected Atoms:  ['in(a15)', 'in(a19)', 'in(a18)', 'in(a13)', 'in(a11)']
+Facet Count:  2
+
+⏱️  Performance Profile:
+Entire program                : 0.1553s (100.0%)
+Facet count time              : 0.1502s (96.7%)
+**FASB execution              : 0.1426s (91.8%)
+**Clingo time                 : 0.0042s (2.7%)
+Create modified program       : 0.0036s (2.3%)
+Extract show atoms            : 0.0002s (0.1%)
+User input                    : 0.0001s (0.0%)
+Generate constraints          : 0.0000s (0.0%)

@@ -1,0 +1,471 @@
+No limit type provided. Using default limit by answer count.
+No limit value provided. Using default limit of 100.
+No mode provided. Using default mode 'max' facet count under projection.
+
+🚀 Starting program with file: af_st_expanded_proj2.lp, limit_type: c, limit_value: 100, mode: max
+
+
+Projected atoms extracted: ['in(a123)', 'in(a86)', 'in(a124)', 'in(a85)', 'in(a125)']
+
+Total answer sets found: 15
+
+✅ Projected answer Set 1: [in(a77), in(a79), in(a120), in(a126), in(a82), in(a129), in(a123), in(a89), in(a90), in(a93), in(a11), in(a140), in(a12), in(a143), in(a17), in(a16), in(a145), in(a20), in(a22), in(a131), in(a26), in(a25), in(a29), in(a137), in(a33), in(a162), in(a163), in(a34), in(a39), in(a160), in(a38), in(a161), in(a44), in(a43), in(a154), in(a49), in(a150), in(a155), in(a55), in(a57), in(a59), in(a105), in(a107), in(a100), in(a64), in(a67), in(a1), in(a3), in(a6), in(a7), in(a70)]
+Inclusive Projected Atoms:  ['in(a123)']
+Exclusive Projected Atoms:  ['in(a86)', 'in(a124)', 'in(a85)', 'in(a125)']
+Facet Count:  79
+
+✅ Projected answer Set 2: [in(a77), in(a79), in(a120), in(a127), in(a82), in(a129), in(a123), in(a124), in(a89), in(a90), in(a93), in(a97), in(a11), in(a12), in(a15), in(a19), in(a18), in(a145), in(a147), in(a22), in(a130), in(a24), in(a131), in(a26), in(a28), in(a29), in(a137), in(a136), in(a33), in(a162), in(a163), in(a34), in(a39), in(a38), in(a161), in(a44), in(a43), in(a49), in(a155), in(a55), in(a57), in(a59), in(a105), in(a107), in(a100), in(a64), in(a67), in(a1), in(a3), in(a6), in(a7), in(a70)]
+Inclusive Projected Atoms:  ['in(a123)', 'in(a124)']
+Exclusive Projected Atoms:  ['in(a86)', 'in(a85)', 'in(a125)']
+Facet Count:  64
+
+✅ Projected answer Set 3: [in(a77), in(a79), in(a120), in(a127), in(a82), in(a129), in(a123), in(a124), in(a125), in(a89), in(a90), in(a93), in(a97), in(a96), in(a11), in(a99), in(a12), in(a15), in(a19), in(a18), in(a145), in(a147), in(a21), in(a130), in(a24), in(a131), in(a26), in(a28), in(a29), in(a137), in(a136), in(a33), in(a162), in(a163), in(a34), in(a39), in(a38), in(a161), in(a44), in(a43), in(a153), in(a47), in(a49), in(a155), in(a55), in(a57), in(a59), in(a105), in(a107), in(a100), in(a64), in(a67), in(a1), in(a3), in(a5), in(a7), in(a9), in(a70), in(a73)]
+Inclusive Projected Atoms:  ['in(a123)', 'in(a124)', 'in(a125)']
+Exclusive Projected Atoms:  ['in(a86)', 'in(a85)']
+Facet Count:  32
+
+✅ Projected answer Set 4: [in(a77), in(a79), in(a120), in(a121), in(a127), in(a82), in(a129), in(a122), in(a123), in(a124), in(a85), in(a125), in(a89), in(a90), in(a93), in(a97), in(a96), in(a11), in(a99), in(a141), in(a12), in(a15), in(a19), in(a18), in(a145), in(a147), in(a130), in(a24), in(a131), in(a26), in(a28), in(a137), in(a136), in(a33), in(a162), in(a163), in(a34), in(a39), in(a38), in(a161), in(a44), in(a43), in(a153), in(a47), in(a49), in(a155), in(a55), in(a57), in(a59), in(a104), in(a105), in(a107), in(a100), in(a64), in(a66), in(a68), in(a1), in(a3), in(a5), in(a7), in(a9), in(a70), in(a73), in(a72)]
+Inclusive Projected Atoms:  ['in(a123)', 'in(a124)', 'in(a85)', 'in(a125)']
+Exclusive Projected Atoms:  ['in(a86)']
+Facet Count:  32
+
+✅ Projected answer Set 5: [in(a77), in(a79), in(a120), in(a121), in(a127), in(a82), in(a129), in(a122), in(a123), in(a124), in(a85), in(a89), in(a90), in(a93), in(a97), in(a11), in(a141), in(a12), in(a15), in(a17), in(a19), in(a145), in(a147), in(a130), in(a24), in(a131), in(a23), in(a26), in(a28), in(a137), in(a136), in(a33), in(a162), in(a163), in(a34), in(a39), in(a38), in(a161), in(a44), in(a43), in(a153), in(a49), in(a155), in(a55), in(a57), in(a59), in(a104), in(a105), in(a107), in(a100), in(a64), in(a66), in(a68), in(a1), in(a3), in(a6), in(a7), in(a70), in(a72)]
+Inclusive Projected Atoms:  ['in(a123)', 'in(a124)', 'in(a85)']
+Exclusive Projected Atoms:  ['in(a86)', 'in(a125)']
+Facet Count:  63
+
+✅ Projected answer Set 6: [in(a77), in(a79), in(a120), in(a127), in(a82), in(a129), in(a123), in(a125), in(a89), in(a90), in(a93), in(a96), in(a11), in(a99), in(a12), in(a15), in(a19), in(a18), in(a145), in(a21), in(a131), in(a26), in(a25), in(a29), in(a137), in(a33), in(a162), in(a163), in(a34), in(a39), in(a38), in(a161), in(a44), in(a43), in(a153), in(a47), in(a49), in(a51), in(a155), in(a55), in(a57), in(a59), in(a105), in(a107), in(a100), in(a64), in(a67), in(a1), in(a3), in(a5), in(a7), in(a9), in(a70), in(a73)]
+Inclusive Projected Atoms:  ['in(a123)', 'in(a125)']
+Exclusive Projected Atoms:  ['in(a86)', 'in(a124)', 'in(a85)']
+Facet Count:  50
+
+✅ Projected answer Set 7: [in(a77), in(a79), in(a120), in(a121), in(a127), in(a82), in(a129), in(a122), in(a123), in(a85), in(a125), in(a89), in(a90), in(a93), in(a96), in(a11), in(a99), in(a141), in(a12), in(a15), in(a19), in(a18), in(a145), in(a131), in(a26), in(a25), in(a137), in(a33), in(a162), in(a163), in(a34), in(a39), in(a38), in(a161), in(a44), in(a43), in(a153), in(a47), in(a49), in(a51), in(a155), in(a55), in(a57), in(a59), in(a104), in(a105), in(a107), in(a100), in(a64), in(a66), in(a68), in(a1), in(a3), in(a5), in(a7), in(a9), in(a70), in(a73), in(a72)]
+Inclusive Projected Atoms:  ['in(a123)', 'in(a85)', 'in(a125)']
+Exclusive Projected Atoms:  ['in(a86)', 'in(a124)']
+Facet Count:  32
+
+✅ Projected answer Set 8: [in(a77), in(a79), in(a120), in(a121), in(a127), in(a82), in(a129), in(a122), in(a123), in(a85), in(a89), in(a90), in(a93), in(a11), in(a141), in(a12), in(a15), in(a17), in(a19), in(a145), in(a131), in(a23), in(a26), in(a25), in(a137), in(a33), in(a162), in(a163), in(a34), in(a39), in(a38), in(a161), in(a44), in(a43), in(a153), in(a49), in(a51), in(a155), in(a55), in(a57), in(a59), in(a104), in(a105), in(a107), in(a100), in(a64), in(a66), in(a68), in(a1), in(a3), in(a6), in(a7), in(a70), in(a72)]
+Inclusive Projected Atoms:  ['in(a123)', 'in(a85)']
+Exclusive Projected Atoms:  ['in(a86)', 'in(a124)', 'in(a125)']
+Facet Count:  63
+
+✅ Projected answer Set 9: [in(a77), in(a79), in(a120), in(a127), in(a82), in(a129), in(a84), in(a123), in(a86), in(a124), in(a89), in(a119), in(a90), in(a116), in(a93), in(a97), in(a11), in(a12), in(a15), in(a19), in(a18), in(a148), in(a145), in(a147), in(a21), in(a130), in(a24), in(a131), in(a26), in(a28), in(a29), in(a137), in(a136), in(a162), in(a32), in(a163), in(a34), in(a36), in(a39), in(a38), in(a161), in(a44), in(a43), in(a153), in(a49), in(a155), in(a158), in(a55), in(a57), in(a59), in(a109), in(a105), in(a107), in(a100), in(a64), in(a67), in(a1), in(a3), in(a6), in(a7), in(a70)]
+Inclusive Projected Atoms:  ['in(a123)', 'in(a86)', 'in(a124)']
+Exclusive Projected Atoms:  ['in(a85)', 'in(a125)']
+Facet Count:  38
+
+✅ Projected answer Set 10: [in(a77), in(a79), in(a120), in(a121), in(a127), in(a82), in(a129), in(a84), in(a122), in(a123), in(a86), in(a124), in(a85), in(a89), in(a119), in(a90), in(a116), in(a93), in(a97), in(a11), in(a141), in(a12), in(a15), in(a19), in(a18), in(a148), in(a145), in(a147), in(a130), in(a24), in(a131), in(a26), in(a28), in(a137), in(a136), in(a162), in(a32), in(a163), in(a34), in(a36), in(a39), in(a38), in(a161), in(a44), in(a43), in(a153), in(a49), in(a155), in(a158), in(a55), in(a57), in(a59), in(a109), in(a104), in(a105), in(a107), in(a100), in(a64), in(a66), in(a68), in(a1), in(a3), in(a6), in(a7), in(a70), in(a72)]
+Inclusive Projected Atoms:  ['in(a123)', 'in(a86)', 'in(a124)', 'in(a85)']
+Exclusive Projected Atoms:  ['in(a125)']
+Facet Count:  38
+
+✅ Projected answer Set 11: [in(a77), in(a79), in(a120), in(a127), in(a82), in(a129), in(a84), in(a123), in(a86), in(a89), in(a119), in(a90), in(a116), in(a93), in(a11), in(a12), in(a15), in(a19), in(a18), in(a148), in(a145), in(a21), in(a131), in(a26), in(a25), in(a29), in(a137), in(a162), in(a32), in(a163), in(a34), in(a36), in(a39), in(a38), in(a161), in(a44), in(a43), in(a153), in(a49), in(a51), in(a155), in(a158), in(a55), in(a57), in(a59), in(a109), in(a105), in(a107), in(a100), in(a64), in(a67), in(a1), in(a3), in(a6), in(a7), in(a70)]
+Inclusive Projected Atoms:  ['in(a123)', 'in(a86)']
+Exclusive Projected Atoms:  ['in(a124)', 'in(a85)', 'in(a125)']
+Facet Count:  55
+
+✅ Projected answer Set 12: [in(a77), in(a79), in(a120), in(a121), in(a127), in(a82), in(a129), in(a84), in(a122), in(a123), in(a86), in(a85), in(a89), in(a119), in(a90), in(a116), in(a93), in(a11), in(a141), in(a12), in(a15), in(a19), in(a18), in(a148), in(a145), in(a131), in(a26), in(a25), in(a137), in(a162), in(a32), in(a163), in(a34), in(a36), in(a39), in(a38), in(a161), in(a44), in(a43), in(a153), in(a49), in(a51), in(a155), in(a158), in(a55), in(a57), in(a59), in(a109), in(a104), in(a105), in(a107), in(a100), in(a64), in(a66), in(a68), in(a1), in(a3), in(a6), in(a7), in(a70), in(a72)]
+Inclusive Projected Atoms:  ['in(a123)', 'in(a86)', 'in(a85)']
+Exclusive Projected Atoms:  ['in(a124)', 'in(a125)']
+Facet Count:  38
+
+✅ Projected answer Set 13: [in(a77), in(a79), in(a120), in(a127), in(a82), in(a129), in(a125), in(a89), in(a90), in(a93), in(a117), in(a111), in(a112), in(a96), in(a11), in(a99), in(a12), in(a15), in(a19), in(a18), in(a145), in(a146), in(a131), in(a26), in(a25), in(a137), in(a33), in(a162), in(a163), in(a34), in(a39), in(a38), in(a42), in(a44), in(a46), in(a153), in(a47), in(a49), in(a51), in(a155), in(a55), in(a57), in(a59), in(a105), in(a107), in(a100), in(a64), in(a67), in(a1), in(a3), in(a5), in(a7), in(a9), in(a70), in(a73)]
+Inclusive Projected Atoms:  ['in(a125)']
+Exclusive Projected Atoms:  ['in(a123)', 'in(a86)', 'in(a124)', 'in(a85)']
+Facet Count:  52
+
+✅ Projected answer Set 14: [in(a77), in(a79), in(a120), in(a127), in(a82), in(a129), in(a89), in(a90), in(a93), in(a117), in(a111), in(a112), in(a11), in(a12), in(a15), in(a17), in(a19), in(a145), in(a146), in(a131), in(a23), in(a26), in(a25), in(a137), in(a33), in(a162), in(a163), in(a34), in(a39), in(a38), in(a42), in(a44), in(a46), in(a153), in(a49), in(a51), in(a155), in(a55), in(a57), in(a59), in(a105), in(a107), in(a100), in(a64), in(a67), in(a1), in(a3), in(a6), in(a7), in(a70)]
+Inclusive Projected Atoms:  []
+Exclusive Projected Atoms:  ['in(a123)', 'in(a86)', 'in(a124)', 'in(a85)', 'in(a125)']
+Facet Count:  82
+
+✅ Projected answer Set 15: [in(a77), in(a79), in(a120), in(a127), in(a82), in(a129), in(a84), in(a86), in(a89), in(a119), in(a90), in(a116), in(a93), in(a117), in(a111), in(a112), in(a11), in(a12), in(a15), in(a19), in(a18), in(a148), in(a145), in(a146), in(a131), in(a26), in(a25), in(a137), in(a162), in(a32), in(a163), in(a34), in(a36), in(a39), in(a38), in(a42), in(a44), in(a46), in(a153), in(a49), in(a51), in(a155), in(a158), in(a55), in(a57), in(a59), in(a109), in(a105), in(a107), in(a100), in(a64), in(a67), in(a1), in(a3), in(a6), in(a7), in(a70)]
+Inclusive Projected Atoms:  ['in(a86)']
+Exclusive Projected Atoms:  ['in(a123)', 'in(a124)', 'in(a85)', 'in(a125)']
+Facet Count:  56
+
+Navigation mode started:
+FASB execution output:
+fasb v0.2.5
+
+:: ! 1
+solution 1: 
+in(a79) in(a120) in(a80) in(a82) in(a81) in(a129) in(a89) in(a115) in(a90) in(a92) in(a118) in(a95) in(a94) in(a10) in(a98) in(a12) in(a15) in(a14) in(a17) in(a19) in(a144) in(a145) in(a21) in(a131) in(a23) in(a132) in(a25) in(a27) in(a29) in(a138) in(a31) in(a135) in(a33) in(a162) in(a163) in(a34) in(a39) in(a38) in(a44) in(a151) in(a43) in(a152) in(a153) in(a48) in(a51) in(a155) in(a50) in(a55) in(a56) in(a105) in(a60) in(a107) in(a62) in(a100) in(a61) in(a102) in(a103) in(a65) in(a67) in(a1) in(a2) in(a6) in(a7) in(a74) 
+found 1
+:: #?
+164
+:: \ != #f 0 | $$ . #??
+_ _ in(a55)
+0.5065 76 in(a127)
+0.0130 152 ~in(a127)
+0.0519 146 in(a12)
+0.4935 78 ~in(a12)
+0.4935 78 in(a156)
+0.0519 146 ~in(a156)
+0.2208 120 in(a69)
+0.0130 152 ~in(a69)
+0.4935 78 in(a108)
+0.0519 146 ~in(a108)
+0.0909 140 in(a38)
+0.2597 114 ~in(a38)
+0.0649 144 in(a56)
+0.0649 144 ~in(a56)
+0.1688 128 in(a22)
+0.0260 150 ~in(a22)
+0.0649 144 in(a94)
+0.0649 144 ~in(a94)
+0.0649 144 in(a77)
+0.0649 144 ~in(a77)
+0.1948 124 in(a138)
+0.0390 148 ~in(a138)
+0.4935 78 in(a13)
+0.0519 146 ~in(a13)
+0.0649 144 in(a57)
+0.0649 144 ~in(a57)
+0.0390 148 in(a151)
+0.3247 104 ~in(a151)
+0.0649 144 in(a17)
+0.0390 148 ~in(a17)
+0.1688 128 in(a26)
+0.0779 142 ~in(a26)
+0.3896 94 in(a80)
+0.1299 134 ~in(a80)
+0.3896 94 in(a132)
+0.1299 134 ~in(a132)
+0.0260 150 in(a153)
+0.1688 128 ~in(a153)
+0.0390 148 in(a137)
+0.1948 124 ~in(a137)
+0.3247 104 in(a81)
+0.1039 138 ~in(a81)
+0.4026 92 in(a64)
+0.0130 152 ~in(a64)
+0.3247 104 in(a118)
+0.1039 138 ~in(a118)
+0.0649 144 in(a144)
+0.0649 144 ~in(a144)
+0.2597 114 in(a0)
+0.0649 144 ~in(a0)
+0.0649 144 in(a92)
+0.0649 144 ~in(a92)
+0.1169 136 in(a112)
+0.1818 126 ~in(a112)
+0.3247 104 in(a62)
+0.1039 138 ~in(a62)
+0.3247 104 in(a61)
+0.1039 138 ~in(a61)
+0.3896 94 in(a10)
+0.1299 134 ~in(a10)
+0.0779 142 in(a74)
+0.1688 128 ~in(a74)
+0.0779 142 in(a27)
+0.1688 128 ~in(a27)
+0.1818 126 in(a29)
+0.1169 136 ~in(a29)
+0.2208 120 in(a21)
+0.0130 152 ~in(a21)
+0.4286 88 in(a71)
+0.0649 144 ~in(a71)
+0.0260 150 in(a2)
+0.1948 124 ~in(a2)
+0.2597 114 in(a113)
+0.0649 144 ~in(a113)
+0.3247 104 in(a70)
+0.0390 148 ~in(a70)
+0.2597 114 in(a142)
+0.0909 140 ~in(a142)
+0.0649 144 in(a60)
+0.0649 144 ~in(a60)
+0.1948 124 in(a152)
+0.0390 148 ~in(a152)
+0.0390 148 in(a18)
+0.0649 144 ~in(a18)
+0.1169 136 in(a146)
+0.1818 126 ~in(a146)
+0.0779 142 in(a135)
+0.1688 128 ~in(a135)
+0.0649 144 in(a59)
+0.0649 144 ~in(a59)
+0.0649 144 in(a23)
+0.0390 148 ~in(a23)
+0.1169 136 in(a42)
+0.1818 126 ~in(a42)
+0.2597 114 in(a91)
+0.0909 140 ~in(a91)
+0.3896 94 in(a115)
+0.1299 134 ~in(a115)
+0.1169 136 in(a111)
+0.1818 126 ~in(a111)
+0.2597 114 in(a41)
+0.0909 140 ~in(a41)
+0.1169 136 in(a46)
+0.1818 126 ~in(a46)
+0.0649 144 in(a1)
+0.2597 114 ~in(a1)
+0.2597 114 in(a76)
+0.0649 144 ~in(a76)
+0.1169 136 in(a117)
+0.1818 126 ~in(a117)
+0.1948 124 in(a3)
+0.0260 150 ~in(a3)
+0.3896 94 in(a14)
+0.1299 134 ~in(a14)
+0.2597 114 in(a4)
+0.0649 144 ~in(a4)
+0.3247 104 in(a98)
+0.1039 138 ~in(a98)
+0.3247 104 in(a50)
+0.1039 138 ~in(a50)
+0.4286 88 in(a133)
+0.0649 144 ~in(a133)
+0.1039 138 in(a49)
+0.3247 104 ~in(a49)
+0.2597 114 in(a75)
+0.0909 140 ~in(a75)
+0.2597 114 in(a37)
+0.0909 140 ~in(a37)
+0.4286 88 in(a35)
+0.0649 144 ~in(a35)
+0.3896 94 in(a31)
+0.1299 134 ~in(a31)
+0.3896 94 in(a65)
+0.1299 134 ~in(a65)
+0.2597 114 in(a88)
+0.0909 140 ~in(a88)
+0.3247 104 in(a48)
+0.1039 138 ~in(a48)
+0.1818 126 in(a43)
+0.1169 136 ~in(a43)
+0.3896 94 in(a95)
+0.1299 134 ~in(a95)
+0.4286 88 in(a139)
+0.0649 144 ~in(a139)
+0.0649 144 in(a34)
+0.4286 88 ~in(a34)
+0.0649 144 in(a102)
+0.0649 144 ~in(a102)
+0.1299 134 in(a11)
+0.3896 94 ~in(a11)
+0.3896 94 in(a103)
+0.1299 134 ~in(a103)
+0.0649 144 in(a93)
+0.0649 144 ~in(a93)
+_ _ in(a127)
+0.1316 66 in(a93)
+0.1316 66 ~in(a93)
+0.1316 66 in(a77)
+0.1316 66 ~in(a77)
+0.1316 66 in(a92)
+0.1316 66 ~in(a92)
+0.2632 56 in(a75)
+0.1842 62 ~in(a75)
+0.1316 66 in(a57)
+0.1316 66 ~in(a57)
+0.1316 66 in(a60)
+0.1316 66 ~in(a60)
+0.5526 34 in(a64)
+0.0263 74 ~in(a64)
+0.1842 62 in(a38)
+0.2632 56 ~in(a38)
+0.3947 46 in(a3)
+0.0526 72 ~in(a3)
+0.2632 56 in(a91)
+0.1842 62 ~in(a91)
+0.1316 66 in(a94)
+0.1316 66 ~in(a94)
+0.4211 44 in(a98)
+0.2105 60 ~in(a98)
+0.4211 44 in(a62)
+0.2105 60 ~in(a62)
+0.1316 66 in(a59)
+0.1316 66 ~in(a59)
+0.0789 70 in(a18)
+0.1316 66 ~in(a18)
+0.2105 60 in(a49)
+0.4211 44 ~in(a49)
+0.4211 44 in(a61)
+0.2105 60 ~in(a61)
+0.1316 66 in(a56)
+0.1316 66 ~in(a56)
+0.4211 44 in(a48)
+0.2105 60 ~in(a48)
+0.4211 44 in(a113)
+0.1316 66 ~in(a113)
+0.1316 66 in(a23)
+0.0789 70 ~in(a23)
+0.1316 66 in(a1)
+0.4211 44 ~in(a1)
+0.4211 44 in(a0)
+0.1316 66 ~in(a0)
+0.1316 66 in(a144)
+0.1316 66 ~in(a144)
+0.4211 44 in(a81)
+0.2105 60 ~in(a81)
+0.2632 56 in(a88)
+0.1842 62 ~in(a88)
+0.1316 66 in(a17)
+0.0789 70 ~in(a17)
+0.2632 56 in(a142)
+0.1842 62 ~in(a142)
+0.3158 52 in(a22)
+0.0526 72 ~in(a22)
+0.2632 56 in(a37)
+0.1842 62 ~in(a37)
+0.0526 72 in(a153)
+0.3158 52 ~in(a153)
+0.4211 44 in(a118)
+0.2105 60 ~in(a118)
+0.4211 44 in(a4)
+0.1316 66 ~in(a4)
+0.4211 44 in(a50)
+0.2105 60 ~in(a50)
+0.0526 72 in(a2)
+0.3947 46 ~in(a2)
+0.2632 56 in(a41)
+0.1842 62 ~in(a41)
+0.4211 44 in(a76)
+0.1316 66 ~in(a76)
+0.1316 66 in(a102)
+0.1316 66 ~in(a102)
+_ _ in(a93)
+0.4848 34 in(a118)
+0.2424 50 ~in(a118)
+0.1515 56 in(a59)
+0.1515 56 ~in(a59)
+0.4848 34 in(a4)
+0.1515 56 ~in(a4)
+0.1515 56 in(a57)
+0.1515 56 ~in(a57)
+0.6364 24 in(a64)
+0.0303 64 ~in(a64)
+0.4848 34 in(a76)
+0.1515 56 ~in(a76)
+0.3030 46 in(a37)
+0.2121 52 ~in(a37)
+0.0606 62 in(a153)
+0.3636 42 ~in(a153)
+0.4848 34 in(a98)
+0.2424 50 ~in(a98)
+0.3030 46 in(a41)
+0.2121 52 ~in(a41)
+0.2121 52 in(a38)
+0.3030 46 ~in(a38)
+0.1515 56 in(a60)
+0.1515 56 ~in(a60)
+0.0909 60 in(a18)
+0.1515 56 ~in(a18)
+0.3030 46 in(a88)
+0.2121 52 ~in(a88)
+0.4848 34 in(a113)
+0.1515 56 ~in(a113)
+0.1515 56 in(a1)
+0.4848 34 ~in(a1)
+0.3030 46 in(a142)
+0.2121 52 ~in(a142)
+0.1515 56 in(a56)
+0.1515 56 ~in(a56)
+0.4848 34 in(a81)
+0.2424 50 ~in(a81)
+0.1515 56 in(a23)
+0.0909 60 ~in(a23)
+0.4848 34 in(a50)
+0.2424 50 ~in(a50)
+0.4848 34 in(a62)
+0.2424 50 ~in(a62)
+0.3636 42 in(a22)
+0.0606 62 ~in(a22)
+0.0606 62 in(a2)
+0.4545 36 ~in(a2)
+0.4545 36 in(a3)
+0.0606 62 ~in(a3)
+0.4848 34 in(a0)
+0.1515 56 ~in(a0)
+0.1515 56 in(a17)
+0.0909 60 ~in(a17)
+0.3030 46 in(a91)
+0.2121 52 ~in(a91)
+0.4848 34 in(a48)
+0.2424 50 ~in(a48)
+0.1515 56 in(a144)
+0.1515 56 ~in(a144)
+0.4848 34 in(a61)
+0.2424 50 ~in(a61)
+0.3030 46 in(a75)
+0.2121 52 ~in(a75)
+0.2424 50 in(a49)
+0.4848 34 ~in(a49)
+_ _ in(a118)
+0.5294 16 in(a91)
+0.4118 20 ~in(a91)
+0.5294 16 in(a37)
+0.4118 20 ~in(a37)
+0.4118 20 in(a38)
+0.5294 16 ~in(a38)
+0.1765 28 in(a18)
+0.2941 24 ~in(a18)
+0.2941 24 in(a144)
+0.2941 24 ~in(a144)
+0.5294 16 in(a142)
+0.4118 20 ~in(a142)
+0.5294 16 in(a75)
+0.4118 20 ~in(a75)
+0.2941 24 in(a57)
+0.2941 24 ~in(a57)
+0.1176 30 in(a153)
+0.7059 10 ~in(a153)
+0.2941 24 in(a59)
+0.2941 24 ~in(a59)
+0.5294 16 in(a41)
+0.4118 20 ~in(a41)
+0.7059 10 in(a22)
+0.1176 30 ~in(a22)
+0.2941 24 in(a17)
+0.1765 28 ~in(a17)
+0.2941 24 in(a56)
+0.2941 24 ~in(a56)
+0.5294 16 in(a88)
+0.4118 20 ~in(a88)
+0.2941 24 in(a23)
+0.1765 28 ~in(a23)
+0.2941 24 in(a60)
+0.2941 24 ~in(a60)
+_ _ in(a91)
+0.3750 10 in(a17)
+0.3750 10 ~in(a17)
+0.6250 6 in(a56)
+0.6250 6 ~in(a56)
+0.3750 10 in(a23)
+0.3750 10 ~in(a23)
+0.3750 10 in(a18)
+0.3750 10 ~in(a18)
+0.6250 6 in(a57)
+0.6250 6 ~in(a57)
+0.6250 6 in(a60)
+0.6250 6 ~in(a60)
+0.6250 6 in(a59)
+0.6250 6 ~in(a59)
+0.6250 6 in(a144)
+0.6250 6 ~in(a144)
+_ _ in(a17)
+1.0000 0 in(a59)
+1.0000 0 ~in(a59)
+1.0000 0 in(a57)
+1.0000 0 ~in(a57)
+1.0000 0 in(a60)
+1.0000 0 ~in(a60)
+1.0000 0 in(a56)
+1.0000 0 ~in(a56)
+1.0000 0 in(a144)
+1.0000 0 ~in(a144)
+_ _ in(a59)
+:: @
+in(a55) in(a127) in(a93) in(a118) in(a91) in(a17) in(a59) 
+
+
+⏱️  Performance Profile:
+Entire program                : 0.3932s (100.0%)
+FASB execution                : 0.3766s (95.8%)
+Projected facet counting      : 0.2649s (67.4%)
+Navigation                    : 0.1217s (31.0%)
+Answer set processing         : 0.0030s (0.8%)
+Clingo initialization         : 0.0027s (0.7%)

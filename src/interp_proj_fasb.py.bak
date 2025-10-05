@@ -1,0 +1,661 @@
+import clingo
+import sys
+import re
+import subprocess
+import os
+import time
+from datetime import datetime
+from collections import defaultdict
+
+# Profiling storage
+# Dictionary to accumulate profile durations
+profile_data = defaultdict(float)
+# Dictionary to store start times per key
+profile_start_times = {}
+
+def start_profile(key):
+    """Start profiling for a specific key."""
+    profile_start_times[key] = time.time()
+
+def record_profile(key):
+    """Record elapsed time for a specific key."""
+    if key in profile_start_times:
+        elapsed = time.time() - profile_start_times[key]
+        profile_data[key] += elapsed
+        del profile_start_times[key]  # Optional: remove to prevent reuse
+    else:
+        print(f"Warning: No start time recorded for key '{key}'")    
+
+def print_profile():
+    print("\n⏱️  Performance Profile:")    
+    total = profile_data.get("Entire program", 0.0)
+    if total == 0:
+        print("No profiling data recorded for 'Entire program'.")
+        return
+    for operation, duration in sorted(profile_data.items(), key=lambda x: -x[1]):
+        print(f"{operation:<30}: {duration:.4f}s ({duration/total*100:.1f}%)")
+    
+
+def get_user_limits():
+    """Ask user what kind of limit they want to set."""
+    start_profile("User input")
+    print("\nChoose the type of limit you want to set:")
+    print("1. Limit by number of answer sets")
+    print("2. Limit by time (seconds)")
+    print("3. No limits (run to completion)")
+
+
+    while True:
+        choice = input("Enter your choice (1, 2, or 3): ").strip()
+        if choice in ['1', '2', '3']:
+            break
+        print("Invalid choice. Please enter 1, 2, or 3.")
+    record_profile("User input")
+
+    if choice == '3':
+        return None, None
+
+    while True:
+        try:
+            if choice == '1':
+                limit = int(input("Enter maximum number of answer sets to compute: "))
+            else:
+                limit = int(input("Enter maximum time in seconds: "))
+            if limit > 0:
+                return choice, limit
+            print("Limit must be a positive integer.")
+        except ValueError:
+            print("Please enter a valid integer.")
+
+def extract_show_atoms(content):
+    start_profile("Extract show atoms")
+    """Extract atoms from #show directives in the input file."""
+    show_atoms = []
+    #3 May, updated regex to match "#project in(a24)" and "#project p" both types.
+    #show_matches = re.finditer(r'#project\s+(in\([a-zA-Z0-9_]+\))\.', content)
+    #show_matches = re.finditer(r'#project\s+(.*\([a-zA-Z0-9_]+\)|[a-zA-Z0-9_]+)\.', content)
+    #for match in show_matches:
+    #    show_atoms.append(match.group(1))
+    #print("content",content)
+    
+    for line in content:
+        print("line:",line)
+        if "#project" in line.strip() and not line.strip().startswith("%"):
+            #match = re.search(r'#project\s+([a-zA-Z_][a-zA-Z0-9_]*\([a-zA-Z0-9_]+\)|[a-zA-Z_][a-zA-Z0-9_]*)\.', line)
+            match = re.search(r'#project\s+([a-zA-Z_][a-zA-Z0-9_]*(?:\([a-zA-Z0-9_,]+\))?)\.', line)
+            print("match:",match)
+            print("match.group(1):",match.group(1))
+            if match:
+                show_atoms.append(match.group(1))
+    record_profile("Extract show atoms")
+    #print("show_atoms:",show_atoms)
+    return show_atoms
+
+def generate_constraints(filtered_ex_atoms, filtered_in_atoms,nv_ex_atoms,nv_in_atoms):
+#    start_profile("Generate constraints")
+    """Generate constraints based on the answer set and show atoms."""
+    constraints = []
+    # Convert answer set symbols to string names
+    #as_atoms = [str(atom) for atom in answer_set]
+    # print("INSIDE generate_constraints: answer_set,", answer_set)
+    # print("INSIDE generate_constraints: show_atoms", show_atoms)
+    # Check if answer set has all show atoms
+    #all_atoms_present = all(atom in as_atoms for atom in show_atoms)
+    for atom in filtered_in_atoms:
+        constraints.append(f":- not {atom}.")
+        # print(":- not ",atom)
+    for atom in filtered_ex_atoms:        
+        constraints.append(f":- {atom}.")
+        # print(":- ",atom)     
+    for atom in nv_in_atoms:
+        constraints.append(f":- not {atom}.")
+        # print(":- not ",atom)    
+#    record_profile("Generate constraints")
+    return constraints
+
+def create_modified_program(original_file, constraints):
+#    start_profile("Create modified program")
+    """Create a new program by removing #show directives and adding constraints."""
+    with open(original_file, 'r') as f:
+        content = f.readlines()
+    #filtered_content = [line for line in content if not line.strip().startswith('#project')]
+    filtered_content = [
+        line for line in content
+        #if not (line.lstrip().startswith('#show') or line.lstrip().startswith('#project'))
+        if not (line.lstrip().startswith('#project'))
+    ]
+    # Add new constraints
+    modified_content = ''.join(filtered_content) + '\n' + '\n'.join(constraints)
+    temp_filename = "modified.lp"
+    with open(temp_filename, 'w') as f:
+        f.write(modified_content)
+#    record_profile("Create modified program")
+    return temp_filename
+
+
+def execute_fasb(modified_file):
+#    start_profile("FASB execution")
+    """Execute the fasb command on the modified program."""
+    fasb_command = ["fasb", modified_file, "0", "facet_count.fsb"]
+    try:
+        result = subprocess.run(fasb_command, capture_output=True, text=True, check=True)
+        #print("FASB execution output:")
+        #print(result.stdout)
+#        record_profile("FASB execution")
+        return result.stdout
+    except subprocess.CalledProcessError as e:
+        print(f"Error executing fasb command: {e}")
+        print(f"FASB stderr output: {e.stderr}")
+#        record_profile("FASB execution")
+        return None
+
+def execute_fasb_with_activate(modified_file, nv_in_atoms,nv_ex_atoms):
+#    start_profile("FASB execution")
+    """Execute the fasb command on the modified program."""
+    actvate_facet = " ".join(str(atom) for atom in nv_in_atoms)
+    if len(nv_in_atoms) > 0:
+        fasb_args = f"+ facets {actvate_facet}\n#?\n?\n"  # Activate facets, REPL-style input as a string
+    else:
+        fasb_args = f"#?\n?\n"  # Activate facets, REPL-style input as a string        
+    # Debug: print the arguments being sent to fasb
+    print(f"\nFASB Arguments:\n{fasb_args}")
+    with open("facet_count_act.fsb", "w") as file:
+        file.write(fasb_args)
+    fasb_command = ["fasb", modified_file, "0", "facet_count_act.fsb"]
+    try:
+        result = subprocess.run(fasb_command, capture_output=True, text=True, check=True)
+        print("FASB execution output:")
+        print(result.stdout)
+        record_profile("FASB execution")
+        return result.stdout
+    except subprocess.CalledProcessError as e:
+        print(f"Error executing fasb command: {e}")
+        print(f"FASB stderr output: {e.stderr}")
+#        record_profile("FASB execution")
+        return None
+        
+def print_facets(facets_list):
+    if facets_list:
+        print(f"\n Facets :")
+    for fc_index, facet in enumerate(facets_list, start=1):
+        print(f" {fc_index}: {facet} ")    
+
+
+def execute_fasb_with_fcuef(modified_file, nv_in_atoms,nv_ex_atoms):
+    start_profile("FASB execution")
+    """Execute the fasb command on the modified program."""
+    actvate_facet = " ".join(str(atom) for atom in nv_in_atoms)
+    if len(nv_in_atoms) > 0:
+        fasb_args = f"+ facets {actvate_facet}\n#??\n"  # Activate facets, REPL-style input as a string
+    else:
+        fasb_args = f"#??\n"  # Activate facets, REPL-style input as a string        
+    # Debug: print the arguments being sent to fasb
+    #facet counts under each facet ->  #??
+    print(f"\nFASB Arguments:\n{fasb_args}")
+    with open("facet_count_act.fsb", "w") as file:
+        file.write(fasb_args)
+    fasb_command = ["fasb", modified_file, "0", "facet_count_act.fsb"]
+    try:
+        result = subprocess.run(fasb_command, capture_output=True, text=True, check=True)
+        # print("FASB execution output:")
+        # print(result.stdout)
+        record_profile("FASB execution")
+        return result.stdout
+    except subprocess.CalledProcessError as e:
+        print(f"Error executing fasb command: {e}")
+        print(f"FASB stderr output: {e.stderr}")
+        record_profile("FASB execution")
+        return None    
+
+
+def facet_processing(filtered_ex_atoms, filtered_in_atoms, nv_ex_atoms, nv_in_atoms, projected_file):
+    facets_count = 0
+    facets_list = []
+    
+    start_profile("Generate constraints")
+    constraints = generate_constraints(filtered_ex_atoms, filtered_in_atoms, nv_ex_atoms, nv_in_atoms)
+    record_profile("Generate constraints")
+    start_profile("Create modified program")
+    modified_file = create_modified_program(projected_file, constraints)
+    record_profile("Create modified program")
+    start_profile("**FASB execution")
+    stdout = execute_fasb(modified_file)
+    record_profile("**FASB execution")
+
+    if stdout is None:
+        return []
+
+    ansi_escape = re.compile(r'\x1b\[[0-9;]*m')
+    opt_lines = stdout.splitlines()
+
+    # Remove empty lines
+    r_emp_lines = [line for line in opt_lines if line.strip()]
+
+    # Remove ANSI codes and filter out lines starting with "::"
+    lines = [
+        line for line in r_emp_lines
+        if not ansi_escape.sub('', line).strip().startswith("::")
+    ]
+
+    try:
+        facets_count = int(lines[1])
+    except (IndexError, ValueError):
+        print("Invalid or missing facet count format.")
+        return []
+
+    if facets_count == 0:
+        return []
+
+    if facets_count > 0 and len(lines) < 3:
+        print("FASB output format unexpected.")
+        return []
+
+    facets_list = sorted(lines[2].split())
+    if len(facets_list) != facets_count / 2:
+        print(f"Warning: Expected {facets_count} exclusive facets, but found {len(facets_list)}.")
+        return []
+
+    return facets_list
+
+
+def facet_activate(filtered_ex_atoms,filtered_in_atoms,nv_ex_atoms,nv_in_atoms,projected_file):
+    facets_count=0
+    facets_list=[]
+    print("\nFacet Count Processing:")
+    fc_in_atoms=[]
+    fc_ex_atoms=[]
+    start_profile("Generate constraints")
+    constraints = generate_constraints(filtered_ex_atoms, filtered_in_atoms,fc_ex_atoms,fc_in_atoms)
+    record_profile("Generate constraints")
+    start_profile("Create modified program")
+    modified_file = create_modified_program(projected_file, constraints)
+    record_profile("Create modified program")
+    start_profile("FASB execution for activated atoms")
+    stdout=execute_fasb_with_activate(modified_file, nv_in_atoms,nv_ex_atoms)
+    record_profile("FASB execution for activated atoms")
+
+    if stdout is None:
+        return []
+    ansi_escape = re.compile(r'\x1b\[[0-9;]*m')    
+    opt_lines = stdout.splitlines()
+    # Remove ANSI codes and filter lines
+    lines = [
+        line for line in opt_lines
+        if not ansi_escape.sub('', line).strip().startswith("::")
+    ]        
+    print("lines:",lines)
+    print("\nlines:",lines[2])
+    try:
+        facets_count = int(lines[2])
+    except ValueError:
+        print("Invalid facet count format.")
+        return []
+    if facets_count == 0:
+        # print("No facets available.")        
+        return []
+    if facets_count > 0 and len(lines) < 3:
+        print("FASB output format unexpected.")
+        return []
+    facets_list = sorted(lines[3].split())
+    if len(facets_list) != facets_count/2:
+        print(f"Warning: Expected {facets_count} exclusive facets, but found {len(facets_list)}.")
+        return []
+    return facets_list  
+
+# def facet_navigation(facet_list,
+#                      filtered_in_atoms,
+#                      filtered_ex_atoms,
+#                      projected_file):
+#     if len(facet_list) == 0:
+#         print("No facets available for navigation.")
+#         return
+#     fc_index = 0
+#     nv_in_atoms = set()
+#     nv_ex_atoms = set()
+#     while True:        
+#         start_profile("User input")    
+#         print(f"\n Current facet {fc_index + 1}:{facet_list[fc_index]}")              
+#         print("\nFacet Navigation Commands:")
+#         print(" c - Current facet")
+#         print(" n - Next facet")
+#         print(" p - Previous facet")
+#         print(" q - Quit navigation")
+#         command = input("Enter command (c/n/p/q): ").strip().lower()
+#         record_profile("User input")
+#         if command == 'n':
+#             if fc_index < len(facet_list) - 1:
+#                 fc_index += 1
+#             else:
+#                 print("Already at the last facet .")
+#         elif command == 'p':
+#             if fc_index > 0:
+#                 fc_index -= 1
+#             else:
+#                 print("Already at the first facet.")
+#         elif command == 'q':
+#             print("Exiting navigation mode.")
+#             break
+#         elif command == 'c':   
+#             facet=facet_list[fc_index] 
+#             if facet in nv_in_atoms or facet in nv_ex_atoms:
+#                 print(f"Facet {facet} already included in navigation atoms.")
+#                 continue
+#             else:
+#                 nv_in_atoms.add(facet)                
+#                 facet_list=facet_processing(filtered_ex_atoms,
+#                                 filtered_in_atoms,
+#                                 nv_ex_atoms,
+#                                 nv_in_atoms,
+#                                 projected_file) 
+#                 print(f"\n✅Navigation path {nv_in_atoms}:")  
+#                 print("Inclusive Projected Atoms: ", filtered_in_atoms)
+#                 print("Exclusive Projected Atoms: ", filtered_ex_atoms)
+#                 #print("Navigation Inclusive Atoms: ", nv_in_atoms)
+#                 #print("Navigation Exclusive Atoms: ", nv_ex_atoms)
+#                 print("Facet Count: ",len(facet_list))
+#                 print_facets(facet_list)
+#             if len(facet_list) == 0:
+#                 print("No more facets available,End of navigation.")
+#                 break
+#             else:
+#                 fc_index = 0    
+#                 continue                      
+#         else:
+#             print("Invalid command. Please enter c, n, p, or q.")      
+
+def facet_nav_call(filtered_ex_atoms,filtered_in_atoms,nv_ex_atoms,nv_in_atoms,projected_file):                 
+    print("**** Outputting from command facet_nav_call")
+    facet_list=facet_activate(filtered_ex_atoms,filtered_in_atoms,nv_ex_atoms,nv_in_atoms,projected_file) 
+    print(f"\n✅Navigation path {nv_in_atoms}:")  
+    print("Included Projected Atoms: ", filtered_in_atoms)
+    print("Excluded Projected Atoms: ", filtered_ex_atoms)
+    #print("Navigation Inclusive Atoms: ", nv_in_atoms)
+    #print("Navigation Exclusive Atoms: ", nv_ex_atoms)
+    print("Facet Count: ",len(facet_list))
+    print_facets(facet_list)
+    return facet_list
+
+def facet_count_under_each(filtered_ex_atoms,filtered_in_atoms,nv_ex_atoms,nv_in_atoms,projected_file):
+    # This function will count the number of elements under each facet
+    fc_in_atoms=[]
+    fc_ex_atoms=[]
+    constraints = generate_constraints(filtered_ex_atoms, filtered_in_atoms,fc_ex_atoms,fc_in_atoms)
+    modified_file = create_modified_program(projected_file, constraints)
+    stdout=execute_fasb_with_fcuef(modified_file, nv_in_atoms,nv_ex_atoms)
+    print(stdout)
+    
+    if stdout is None:
+        return []
+
+    ansi_escape = re.compile(r'\x1b\[[0-9;]*m')
+    opt_lines = stdout.splitlines()
+
+    # Remove empty lines
+    r_emp_lines = [line for line in opt_lines if line.strip()]
+
+    # Remove ANSI codes and filter out lines starting with "::"
+    lines = [
+        line for line in r_emp_lines
+        if not ansi_escape.sub('', line).strip().startswith("::")
+    ]
+
+    try:
+        facets_count = int(lines[1])
+    except (IndexError, ValueError):
+        print("Invalid or missing facet count format.")
+        return []
+
+    if facets_count == 0:
+        return []
+
+    if facets_count > 0 and len(lines) < 3:
+        print("FASB output format unexpected.")
+        return []
+
+    facets_list = sorted(lines[2].split())
+    if len(facets_list) != facets_count / 2:
+        print(f"Warning: Expected {facets_count} exclusive facets, but found {len(facets_list)}.")
+        return []
+
+    #return facets_list
+
+def facet_navigation(facet_list,filtered_in_atoms,filtered_ex_atoms,projected_file):
+    if len(facet_list) == 0:
+        print("No facets available for navigation.")
+        return
+    nv_in_atoms = []
+    nv_ex_atoms = []
+    cnt=0
+    while True:  
+        cnt+=1   
+        print("Beg of loop navigation atom",nv_in_atoms)
+        print(f"\nNavigation round: {cnt}")
+        start_profile("User input")
+        command = input(f"\n 1: Deactivate previous facet \n 2: Deactivate all facets \n 3: Activate new facet \n 4: Facet counts under each facet \n 5: Quit navigation \n Enter command (1/2/3/4/5): ").strip().lower()
+        record_profile("User input")
+        if command == '1':
+            if len(nv_in_atoms) > 0:
+                nv_in_atoms = nv_in_atoms[:-1]  # Remove last activated facet
+                print("After pop navigation atom",nv_in_atoms)
+                facet_list=facet_nav_call(filtered_ex_atoms,filtered_in_atoms,nv_ex_atoms,nv_in_atoms,projected_file)
+            else:
+                print("No previously activated facets to deactivate.")
+                continue    
+        if command == '2':            
+            nv_in_atoms = []
+            nv_ex_atoms = []
+            facet_list=facet_nav_call(filtered_ex_atoms,filtered_in_atoms,nv_ex_atoms,nv_in_atoms,projected_file)
+        if command == '3':
+            print(f"\nSelect from available facets:\n") 
+            for fc_index, facet in enumerate(facet_list):
+                print(f"{fc_index + 1}: {facet}")
+            start_profile("User input")
+            command = input(f"\nSelect Facet for Navigation [1, ..., {len(facet_list)}]: ")
+            record_profile("User input")
+            try:
+                command_index = int(command)
+                if 1 <= command_index <= len(facet_list):
+                    facet = facet_list[command_index - 1]
+                    if facet in nv_in_atoms or facet in nv_ex_atoms:
+                        print(f"Facet {facet} already included in navigation atoms.")
+                        continue
+                    else:
+                        nv_in_atoms.append(facet)  
+                        facet_list=facet_nav_call(filtered_ex_atoms,filtered_in_atoms,nv_ex_atoms,nv_in_atoms,projected_file)
+                        continue
+                else:
+                    print("Invalid index. Please select a facet.")
+                    continue
+            except ValueError:
+                print("Invalid input. Please enter a numeric index.")    
+                continue
+        if command == '4':
+            print("**** Outputting from command =4")
+            facet_count_under_each(filtered_ex_atoms,filtered_in_atoms,nv_ex_atoms,nv_in_atoms,projected_file)
+            continue
+        if command == '5':
+            print("Exiting navigation mode.")
+            break
+
+
+
+# def answer_set_navigation(all_ans_sets,
+#                           all_ans_facets,
+#                           all_filtered_in_atoms,
+#                           all_filtered_ex_atoms,
+#                           projected_file):        
+#     if len(all_ans_sets) == 0:
+#         print("No answer set available for navigation.")
+#         return
+#     ans_index = 0
+#     while True:
+#         start_profile("User input")
+#         print(f"\n Current Answer Set {ans_index + 1}:{all_ans_sets[ans_index]}")
+#         print("\nNavigation Commands:")
+#         print(" c - Current answer set")
+#         print(" n - Next answer set")
+#         print(" p - Previous answer set")
+#         print(" q - Quit navigation")
+#         command = input("Enter command (n/p/q): ").strip().lower()
+#         record_profile("User input")
+#         if command == 'n':
+#             if ans_index < len(all_ans_sets) - 1:
+#                 ans_index += 1
+#             else:
+#                 print("Already at the last answer set.")
+#         elif command == 'p':
+#             if ans_index > 0:
+#                 ans_index -= 1
+#             else:
+#                 print("Already at the first answer set.")
+#         elif command == 'q':
+#             print("Exiting navigation mode.")
+#             break
+#         elif command == 'c':    
+#             print("Processign faceted navigation for current answer set.")
+#             facet_navigation(all_ans_facets[ans_index],
+#                              all_filtered_in_atoms[ans_index],
+#                              all_filtered_ex_atoms[ans_index],projected_file)
+#             if ans_index < len(all_ans_sets) - 1:
+#                 ans_index += 1
+#             else:
+#                 print("Reached the last answer set, starting from first answer set.")
+#                 ans_index=0                    
+#         else:
+#             print("Invalid command. Please enter c, n, p, or q.")
+
+def answer_set_navigation(all_ans_sets,
+                          all_ans_facets,
+                          all_filtered_in_atoms,
+                          all_filtered_ex_atoms,
+                          projected_file):        
+    if len(all_ans_sets) == 0:
+        print("No answer set available for navigation.")
+        return
+    ans_index = 0
+    print(f"\nAvailable Answer Set Options:\n")
+    for ans_index, ans_set in enumerate(all_ans_sets):
+        print(f"{ans_index + 1}: {ans_set}")
+    start_profile("User input")
+    command = input(f"\nSelect Answer Set Index for Navigation [1, ..., {len(all_ans_sets)}]: ")
+    record_profile("User input")
+    try:
+        command_index = int(command)
+        if 1 <= command_index <= len(all_ans_sets):
+            selected_index = command_index - 1
+            facet_navigation(all_ans_facets[selected_index],
+                    all_filtered_in_atoms[selected_index],
+                    all_filtered_ex_atoms[selected_index],projected_file)
+        else:
+            print("Invalid index. Please select a valid answer set.")
+    except ValueError:
+        print("Invalid input. Please enter a numeric index.")
+
+
+def main(projected_file, limit_type=None, limit_value=None):   
+    navigation_flag=False
+    start_profile("User input")
+    nav_input = input("Do you want to enable navigation mode? (y/n): ").strip().lower()
+    if nav_input == 'y':
+        navigation_flag = True
+    record_profile("User input")            
+
+    with open(projected_file, 'r') as f:
+        content = f.readlines()
+            
+    #--- Extract show atoms
+    show_atoms = extract_show_atoms(content)
+    if not show_atoms:
+        print("Error: No projection in input ASP. Program bypassed.")
+        return
+    else:
+        print(f"\nProjected atoms extracted: {show_atoms}")
+
+    # Initialize solver and counters
+    start_profile("**Clingo time")
+    ctl = clingo.Control(["0", "--project"])
+    #start_profile("Clingo initialization")
+    ctl.load(projected_file)
+    ctl.ground([("base", [])])
+    #record_profile("Clingo initialization")
+ 
+    # Solve and process answer sets
+    ans_solve_start = time.time()
+    all_ans_sets=[]
+    all_ans_facets=[]
+    all_filtered_in_atoms=[]
+    all_filtered_ex_atoms=[]
+    nv_in_atoms=[]
+    nv_ex_atoms=[]
+    #start_profile("Answer set processing")  
+    with ctl.solve(yield_=True) as handle:
+        for model in handle:
+            if limit_type ==1:
+                if len(all_ans_sets) >= limit_value:
+                    print(f"\n🔢 Answer set limit of {limit_value} reached")
+                    break
+            if limit_type ==2:
+                elapsed = time.time() - ans_solve_start
+                if elapsed >= limit_value:
+                    print(f"\n⏰ Time limit of {limit_value} seconds reached")
+                    break              
+            answer_set = model.symbols(shown=True)
+            if answer_set:                 
+                answer_set_strs = set(map(str, answer_set))
+                filtered_in_atoms = [atom for atom in show_atoms if atom in answer_set_strs]
+                filtered_ex_atoms = [atom for atom in show_atoms if atom not in answer_set_strs]      
+                all_ans_sets.append(answer_set)
+                all_filtered_in_atoms.append(filtered_in_atoms)
+                all_filtered_ex_atoms.append(filtered_ex_atoms)
+    # End of solving            
+    #record_profile("Answer set processing")                        
+    record_profile("**Clingo time")
+    if len(all_ans_sets) == 0:
+        print("No answer sets found with the specified projected atoms.")
+        return  
+    else:
+        print(f"\nTotal answer sets found: {len(all_ans_sets)}")
+        #for all_ans_index in enumerate(all_ans_sets)
+        print("\nFacet Count Processing:")
+        start_profile("Facet count time")
+        for ans_idx, ans_sets in enumerate(all_ans_sets):
+            facet_list=facet_processing(all_filtered_ex_atoms[ans_idx],
+                                        all_filtered_in_atoms[ans_idx],
+                                        nv_ex_atoms,
+                                        nv_in_atoms,
+                                        projected_file)
+            print(f"\n✅ Answer Set {ans_idx + 1}: {ans_sets}")        
+            print("Included Projected Atoms: ", all_filtered_in_atoms[ans_idx])
+            print("Excluded Projected Atoms: ", all_filtered_ex_atoms[ans_idx])
+            print("Facet Count: ",len(facet_list))
+            #print_facets(facet_list)
+            if navigation_flag:            
+                all_ans_facets.append(facet_list)
+        record_profile("Facet count time")
+    # Start navigation if enabled
+    if navigation_flag:
+        print("\n Navigation Mode Activated")
+        answer_set_navigation(all_ans_sets,
+                              all_ans_facets,
+                              all_filtered_in_atoms,
+                              all_filtered_ex_atoms,
+                              projected_file
+                              )
+                              
+  
+
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python script.py as_r_file.lp")
+        sys.exit(1)
+    # Record program start time
+    start_profile("Entire program") 
+    # Get user preferences
+    limit_type, limit_value = get_user_limits()
+    # Run the main program with the specified limits
+    main(sys.argv[1], limit_type, limit_value)
+    # Print detailed profile
+    record_profile("Entire program")
+    print_profile()

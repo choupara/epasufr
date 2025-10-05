@@ -105,8 +105,8 @@ def execute_fasb(modified_file):
     fasb_command = ["fasb", modified_file, "0", "fct_cnt.fsb"]
     try:
         result = subprocess.run(fasb_command, capture_output=True, text=True, check=True)
-        print("FASB execution output:")
-        print(result.stdout)
+        #print("FASB execution output:")
+        #print(result.stdout)
         record_profile("FASB execution")
         return result.stdout
     except subprocess.CalledProcessError as e:
@@ -118,7 +118,7 @@ def execute_fasb(modified_file):
     os.remove("fct_cnt.fsb")    
 
 def execute_fasb_bench(modified_file):
-    start_profile("FASB execution")
+#    start_profile("FASB execution")
     """Execute the fasb command on the modified program."""
     # if bench_scirpt.fsb not present, print error and return
     if not os.path.isfile("bench_scirpt.fsb"):
@@ -130,18 +130,17 @@ def execute_fasb_bench(modified_file):
         result = subprocess.run(fasb_command, capture_output=True, text=True, check=True)
         print("FASB execution output:")
         print(result.stdout)
-        record_profile("FASB execution")
+#        record_profile("FASB execution")
         return result.stdout
     except subprocess.CalledProcessError as e:
         print(f"Error executing fasb command: {e}")
         print(f"FASB stderr output: {e.stderr}")
-        record_profile("FASB execution")
+#        record_profile("FASB execution")
         return None    
 
 def facet_processing(filtered_ex_atoms, filtered_in_atoms, nv_ex_atoms, nv_in_atoms, projected_file):
     facets_count = 0
     facets_list = []
-    print("\nFacet Count Processing:")
 
     constraints = generate_constraints(filtered_ex_atoms, filtered_in_atoms, nv_ex_atoms, nv_in_atoms)
     modified_file = create_modified_program(projected_file, constraints)
@@ -219,10 +218,10 @@ def main(projected_file, limit_type, limit_value, mode):
                     print(f"\n⏰ Time limit of {limit_value} seconds reached")
                     break              
             answer_set = model.symbols(shown=True)
-            if answer_set:                 
+            if answer_set:
                 answer_set_strs = set(map(str, answer_set))
                 filtered_in_atoms = [atom for atom in show_atoms if atom in answer_set_strs]
-                filtered_ex_atoms = [atom for atom in show_atoms if atom not in answer_set_strs]      
+                filtered_ex_atoms = [atom for atom in show_atoms if atom not in answer_set_strs]    
                 all_ans_sets.append(answer_set)
                 all_filtered_in_atoms.append(filtered_in_atoms)
                 all_filtered_ex_atoms.append(filtered_ex_atoms)
@@ -244,13 +243,13 @@ def main(projected_file, limit_type, limit_value, mode):
             print(f"\n✅ Projected answer Set {ans_idx + 1}: {ans_sets}")        
             print("Inclusive Projected Atoms: ", all_filtered_in_atoms[ans_idx])
             print("Exclusive Projected Atoms: ", all_filtered_ex_atoms[ans_idx])
-            print("Facet Count: ",facet_count)
+            print("Facet Count: ",int(facet_count/2))
             all_ans_facets.append(facet_count)
     record_profile("Projected facet counting")
 
     # Start navigation mode   
     start_profile("Navigation") 
-    print("\n Navigation mode started:")
+    print("\nNavigation mode started:")
     if mode == "max":
         nav_idx= all_ans_facets.index(max(all_ans_facets))
     elif mode == "min":
@@ -261,6 +260,8 @@ def main(projected_file, limit_type, limit_value, mode):
         print("Invalid mode. Use 'max' , 'min' or 'one'.")
         return            
 
+    #print("\nnv_ex_atoms",nv_ex_atoms)
+    #print("\nnv_in_atoms",nv_in_atoms)
     f_bench_processing(all_filtered_ex_atoms[nav_idx],
                                     all_filtered_in_atoms[nav_idx],
                                     nv_ex_atoms,
@@ -287,7 +288,7 @@ if __name__ == "__main__":
     if len(sys.argv) >= 3:
         limit_type = sys.argv[2]
         if limit_type not in ['c', 't']:
-            print("Invalid limit type. Use '#' for answer set count or 't' for time limit.")
+            print("Invalid limit type. Use 'c' for answer set count or 't' for time limit.")
             sys.exit(1)
     else:
         print("No limit type provided. Using default limit by answer count.")

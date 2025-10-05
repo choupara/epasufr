@@ -1,0 +1,401 @@
+
+Choose the type of limit you want to set:
+1. Limit by number of answer sets
+2. Limit by time (seconds)
+3. No limits (run to completion)
+Enter your choice (1, 2, or 3): Do you want to enable navigation mode? (y/n): line: % Initial state:
+
+line: % A: 3 
+
+line: % B: 7 8 9 10 11 12 13 14 15 16 17 
+
+line: % C: 4 5 6 
+
+line: % D: 1 2 
+
+line: 
+
+line: % Terminal state:
+
+line: % A: 12 13 14 15 16 17 
+
+line: % B: 11 
+
+line: % C: 8 9 10 
+
+line: % D: 1 2 3 4 5 6 7 
+
+line: 
+
+line: % 120 initial moves skipped.
+
+line: % 42 move solution.
+
+line: steps(42).
+
+line: time(0).
+
+line: time(1).
+
+line: time(2).
+
+line: time(3).
+
+line: time(4).
+
+line: time(5).
+
+line: time(6).
+
+line: time(7).
+
+line: time(8).
+
+line: time(9).
+
+line: time(10).
+
+line: time(11).
+
+line: time(12).
+
+line: time(13).
+
+line: time(14).
+
+line: time(15).
+
+line: time(16).
+
+line: time(17).
+
+line: time(18).
+
+line: time(19).
+
+line: time(20).
+
+line: time(21).
+
+line: time(22).
+
+line: time(23).
+
+line: time(24).
+
+line: time(25).
+
+line: time(26).
+
+line: time(27).
+
+line: time(28).
+
+line: time(29).
+
+line: time(30).
+
+line: time(31).
+
+line: time(32).
+
+line: time(33).
+
+line: time(34).
+
+line: time(35).
+
+line: time(36).
+
+line: time(37).
+
+line: time(38).
+
+line: time(39).
+
+line: time(40).
+
+line: time(41).
+
+line: time(42).
+
+line: disk(1).
+
+line: disk(2).
+
+line: disk(3).
+
+line: disk(4).
+
+line: disk(5).
+
+line: disk(6).
+
+line: disk(7).
+
+line: disk(8).
+
+line: disk(9).
+
+line: disk(10).
+
+line: disk(11).
+
+line: disk(12).
+
+line: disk(13).
+
+line: disk(14).
+
+line: disk(15).
+
+line: disk(16).
+
+line: disk(17).
+
+line: disk(18).
+
+line: disk(19).
+
+line: disk(20).
+
+line: disk(21).
+
+line: 
+
+line: on0(7,1).
+
+line: on0(11,2).
+
+line: on0(12,11).
+
+line: on0(13,12).
+
+line: on0(14,13).
+
+line: on0(15,14).
+
+line: on0(16,15).
+
+line: on0(17,16).
+
+line: on0(18,17).
+
+line: on0(19,18).
+
+line: on0(20,19).
+
+line: on0(21,20).
+
+line: on0(8,3).
+
+line: on0(9,8).
+
+line: on0(10,9).
+
+line: on0(5,4).
+
+line: on0(6,5).
+
+line: 
+
+line: 
+
+line: % Terminal State: 
+
+line: ongoal(16,1).
+
+line: ongoal(17,16).
+
+line: ongoal(18,17).
+
+line: ongoal(19,18).
+
+line: ongoal(20,19).
+
+line: ongoal(21,20).
+
+line: ongoal(15,2).
+
+line: ongoal(12,3).
+
+line: ongoal(13,12).
+
+line: ongoal(14,13).
+
+line: ongoal(5,4).
+
+line: ongoal(6,5).
+
+line: ongoal(7,6).
+
+line: ongoal(8,7).
+
+line: ongoal(9,8).
+
+line: ongoal(10,9).
+
+line: ongoal(11,10).
+
+line: 
+
+line: % The meaning of the time predicate is self-evident. As for the disk
+
+line: % predicate, there are k disks 1,2,...,k. Disks 1, 2, 3, 4 denote pegs. 
+
+line: % Disks 5, ... are "movable". The larger the number of the disk, 
+
+line: % the "smaller" it is.
+
+line: %
+
+line: % The program uses additional predicates:
+
+line: % on(T,N,M), which is true iff at time T, disk M is on disk N
+
+line: % move(t,N), which is true iff at time T, it is disk N that will be
+
+line: % moved
+
+line: % where(T,N), which is true iff at time T, the disk to be moved is moved
+
+line: % on top of the disk N.
+
+line: % goal, which is true iff the goal state is reached at time t
+
+line: % steps(T), which is the number of time steps T, required to reach the goal (provided part of Input data)
+
+line: 
+
+line: % Read in data 
+
+line:  	on(0,N1,N) :- on0(N,N1).
+
+line:     onG(K,N1,N) :- ongoal(N,N1), steps(K).
+
+line: 		   
+
+line: % Specify valid arrangements of disks
+
+line:  	% Basic condition. Smaller disks are on larger ones
+
+line:  	:- time(T), on(T,N1,N), N1>=N.
+
+line:  	
+
+line: % Specify a valid move (only for T<t)
+
+line:  	% pick a disk to move
+
+line:     %move(T,N) ; noMove(T,N) :- disk(N), time(T), steps(K), T<K.
+
+line:     %:- move(T,N1), move(T,N2), N1 != N2.
+
+line:     %:- time(T), steps(K), T<K, not diskMoved(T).
+
+line:     %diskMoved(T) :- move(T,Fv1).
+
+line: 	1 { move(T,N) : disk(N) } 1 :- time(T), steps(K), T<K.
+
+line: 
+
+line:  	% pick a disk onto which to move
+
+line:     %where(T,N) ; noWhere(T,N) :- disk(N), time(T), steps(K), T<K.
+
+line:     %:- where(T,N1), where(T,N2), N1 != N2.
+
+line:     %:- time(T), steps(K), T<K, not diskWhere(T).
+
+line:     %diskWhere(T) :- where(T,Fv1).
+
+line: 	1 { where(T,N) : disk(N) } 1 :- time(T), steps(K), T<K.
+
+line: 
+
+line:  	% pegs cannot be moved
+
+line:  	:- move(T,N), N<5.
+
+line: 
+
+line:  	% only top disk can be moved
+
+line:  	:- on(T,N,N1), move(T,N).
+
+line: 
+
+line:  	% a disk can be placed on top only.
+
+line:  	:- on(T,N,N1), where(T,N).
+
+line: 
+
+line:  	% no disk is moved in two consecutive moves
+
+line:  	:- move(T,N), move(TM1,N), TM1=T-1.
+
+line: 
+
+line: % Specify effects of a move
+
+line:  	on(TP1,N1,N) :- move(T,N), where(T,N1), TP1=T+1.
+
+line: 
+
+line:  	on(TP1,N,N1) :- time(T), steps(K), T<K,
+
+line:  	                on(T,N,N1), not move(T,N1), TP1=T+1.
+
+line: 
+
+line: % Goal description
+
+line: 	 :- not on(K,N,N1), onG(K,N,N1), steps(K).
+
+line: 	 :- on(K,N,N1), not onG(K,N,N1),steps(K).
+
+line: 
+
+line: % Solution
+
+line: 	 put(T,M,N) :- move(T,N), where(T,M), steps(K), T<K.
+
+line: 
+
+line: 	 #project put(7,9,10).
+
+match: <re.Match object; span=(2, 23), match='#project put(7,9,10).'>
+match.group(1): put(7,9,10)
+line: 	 #show put/3.
+
+line: 
+
+line: 
+
+
+Projected atoms extracted: ['put(7,9,10)']
+
+Total answer sets found: 2
+
+Facet Count Processing:
+
+✅ Answer Set 1: [put(0,6,7), put(1,7,10), put(2,1,9), put(3,9,10), put(4,7,8), put(5,3,10), put(6,8,9), put(7,1,21), put(8,9,20), put(9,10,19), put(10,19,20), put(11,20,21), put(12,1,18), put(13,9,17), put(14,17,18), put(15,1,16), put(16,15,18), put(17,16,17), put(18,17,18), put(19,9,21), put(20,15,20), put(21,18,19), put(22,19,20), put(23,20,21), put(24,9,10), put(25,10,15), put(26,3,14), put(27,14,15), put(28,10,13), put(29,12,15), put(30,13,14), put(31,14,15), put(32,3,12), put(33,12,15), put(34,11,14), put(35,14,15), put(36,12,13), put(37,10,15), put(38,13,14), put(39,14,15), put(40,10,11), put(41,2,15)]
+Included Projected Atoms:  []
+Excluded Projected Atoms:  ['put(7,9,10)']
+Facet Count:  85
+
+✅ Answer Set 2: [put(0,6,7), put(1,7,10), put(2,1,9), put(3,9,10), put(4,7,8), put(5,3,10), put(6,8,9), put(7,9,10), put(8,3,21), put(9,1,20), put(10,10,19), put(11,19,20), put(12,1,18), put(13,20,21), put(14,3,17), put(15,17,18), put(16,1,16), put(17,15,18), put(18,16,17), put(19,3,21), put(20,17,18), put(21,15,20), put(22,18,19), put(23,19,20), put(24,20,21), put(25,10,15), put(26,3,14), put(27,14,15), put(28,10,13), put(29,12,15), put(30,13,14), put(31,14,15), put(32,3,12), put(33,12,15), put(34,11,14), put(35,14,15), put(36,12,13), put(37,10,15), put(38,13,14), put(39,14,15), put(40,10,11), put(41,2,15)]
+Included Projected Atoms:  ['put(7,9,10)']
+Excluded Projected Atoms:  []
+Facet Count:  40
+
+⏱️  Performance Profile:
+Entire program                : 5100.1493s (100.0%)
+Facet count time              : 4047.7849s (79.4%)
+**FASB execution              : 4047.7559s (79.4%)
+**Clingo time                 : 1051.6598s (20.6%)
+Create modified program       : 0.0171s (0.0%)
+User input                    : 0.0009s (0.0%)
+Extract show atoms            : 0.0003s (0.0%)
+Generate constraints          : 0.0002s (0.0%)

@@ -1,0 +1,11 @@
+
+Choose the type of limit you want to set:
+1. Limit by number of answer sets
+2. Limit by time (seconds)
+3. No limits (run to completion)
+Enter your choice (1, 2, or 3): Do you want to enable navigation mode? (y/n): Error: No projection in input ASP. Program bypassed.
+
+⏱️  Performance Profile:
+Entire program                : 0.0004s (100.0%)
+User input                    : 0.0002s (55.8%)
+Extract show atoms            : 0.0000s (0.4%)

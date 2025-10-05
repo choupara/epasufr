@@ -1,0 +1,31 @@
+
+Choose the type of limit you want to set:
+1. Limit by number of answer sets
+2. Limit by time (seconds)
+3. No limits (run to completion)
+Enter your choice (1, 2, or 3): Do you want to enable navigation mode? (y/n): 
+Projected atoms extracted: ['in(a92)']
+
+Total answer sets found: 2
+
+Facet Count Processing:
+
+✅ Answer Set 1: [in(a77), in(a79), in(a120), in(a126), in(a82), in(a129), in(a123), in(a89), in(a90), in(a93), in(a11), in(a140), in(a12), in(a143), in(a17), in(a16), in(a145), in(a20), in(a22), in(a131), in(a26), in(a25), in(a29), in(a137), in(a33), in(a162), in(a163), in(a34), in(a39), in(a160), in(a38), in(a161), in(a44), in(a43), in(a154), in(a49), in(a150), in(a155), in(a55), in(a57), in(a59), in(a105), in(a107), in(a100), in(a64), in(a67), in(a1), in(a3), in(a6), in(a7), in(a70)]
+Included Projected Atoms:  []
+Excluded Projected Atoms:  ['in(a92)']
+Facet Count:  126
+
+✅ Answer Set 2: [in(a79), in(a120), in(a126), in(a82), in(a129), in(a123), in(a89), in(a90), in(a92), in(a94), in(a11), in(a140), in(a12), in(a143), in(a17), in(a16), in(a145), in(a20), in(a22), in(a131), in(a26), in(a25), in(a29), in(a137), in(a33), in(a162), in(a163), in(a34), in(a39), in(a160), in(a38), in(a161), in(a44), in(a43), in(a154), in(a49), in(a150), in(a155), in(a55), in(a57), in(a59), in(a105), in(a107), in(a100), in(a64), in(a102), in(a67), in(a1), in(a3), in(a6), in(a7), in(a70)]
+Included Projected Atoms:  ['in(a92)']
+Excluded Projected Atoms:  []
+Facet Count:  126
+
+⏱️  Performance Profile:
+Entire program                : 0.0391s (100.0%)
+Facet count time              : 0.0343s (87.7%)
+**FASB execution              : 0.0328s (83.7%)
+**Clingo time                 : 0.0040s (10.2%)
+Create modified program       : 0.0006s (1.6%)
+Extract show atoms            : 0.0002s (0.5%)
+User input                    : 0.0001s (0.2%)
+Generate constraints          : 0.0000s (0.0%)
