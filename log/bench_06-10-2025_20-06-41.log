@@ -1,0 +1,672 @@
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op1056_projset4_instance2.lp
+Main started: 2025-10-06 20:06:41.631022
+
+Projected atoms extracted: ['in(a22)', 'in(a64)', 'in(a70)', 'in(a3)', 'in(a138)', 'in(a17)', 'in(a21)', 'in(a69)', 'in(a51)', 'in(a102)', 'in(a144)', 'in(a56)', 'in(a145)']
+
+
+Projected atoms count: 13
+
+
+Total answer sets found: 1056
+
+⏱️  Performance Profile:
+Entire program                : 8.0410s (100.0%)
+****Facet count time          : 7.9465s (98.8%)
+**FASB execution              : 7.8365s (97.5%)
+Create modified program       : 0.0959s (1.2%)
+**Clingo time                 : 0.0214s (0.3%)
+Generate constraints          : 0.0015s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op1056_projset4_instance2.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op10720_projset10_instance2.lp
+Main started: 2025-10-06 20:06:49.697216
+
+Projected atoms extracted: ['in(a3)', 'in(a17)', 'in(a21)', 'in(a22)', 'in(a28)', 'in(a35)', 'in(a36)', 'in(a42)', 'in(a46)', 'in(a47)', 'in(a51)', 'in(a64)', 'in(a69)', 'in(a70)', 'in(a74)', 'in(a76)', 'in(a81)', 'in(a97)', 'in(a102)', 'in(a121)', 'in(a132)', 'in(a138)', 'in(a144)', 'in(a154)', 'in(a156)']
+
+
+Projected atoms count: 25
+
+
+Total answer sets found: 10720
+
+⏱️  Performance Profile:
+Entire program                : 70.0858s (100.0%)
+****Facet count time          : 69.1312s (98.6%)
+**FASB execution              : 68.2955s (97.4%)
+Create modified program       : 0.7265s (1.0%)
+**Clingo time                 : 0.1794s (0.3%)
+Generate constraints          : 0.0199s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op10720_projset10_instance2.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op12_projset2.lp
+Main started: 2025-10-06 20:07:59.806517
+
+Projected atoms extracted: ['in(a15)', 'in(a14)', 'in(a17)', 'in(a16)', 'in(a19)', 'in(a18)', 'in(a12)', 'in(a13)', 'in(a10)', 'in(a11)']
+
+
+Projected atoms count: 10
+
+
+Total answer sets found: 12
+
+⏱️  Performance Profile:
+Entire program                : 0.0676s (100.0%)
+****Facet count time          : 0.0648s (95.8%)
+**FASB execution              : 0.0634s (93.8%)
+**Clingo time                 : 0.0014s (2.1%)
+Create modified program       : 0.0011s (1.7%)
+Extract show atoms            : 0.0001s (0.1%)
+Generate constraints          : 0.0000s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op12_projset2.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op13336_projset10_instance3.lp
+Main started: 2025-10-06 20:07:59.899084
+
+Projected atoms extracted: ['in(a3)', 'in(a17)', 'in(a21)', 'in(a22)', 'in(a28)', 'in(a35)', 'in(a36)', 'in(a42)', 'in(a46)', 'in(a47)', 'in(a51)', 'in(a64)', 'in(a69)', 'in(a70)', 'in(a74)', 'in(a76)', 'in(a81)', 'in(a97)', 'in(a102)', 'in(a121)', 'in(a132)', 'in(a138)', 'in(a144)', 'in(a154)', 'in(a156)']
+
+
+Projected atoms count: 25
+
+
+Total answer sets found: 13336
+
+⏱️  Performance Profile:
+Entire program                : 83.9921s (100.0%)
+****Facet count time          : 82.8278s (98.6%)
+**FASB execution              : 81.8155s (97.4%)
+Create modified program       : 0.8756s (1.0%)
+**Clingo time                 : 0.2253s (0.3%)
+Generate constraints          : 0.0238s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op13336_projset10_instance3.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op1600_projset10_instance3.lp
+Main started: 2025-10-06 20:09:23.914831
+
+Projected atoms extracted: ['in(a3)', 'in(a17)', 'in(a21)', 'in(a22)', 'in(a28)', 'in(a35)', 'in(a36)', 'in(a42)', 'in(a46)', 'in(a47)', 'in(a51)', 'in(a64)', 'in(a69)', 'in(a70)', 'in(a74)', 'in(a76)', 'in(a81)', 'in(a97)', 'in(a102)', 'in(a121)', 'in(a132)', 'in(a138)', 'in(a144)', 'in(a154)', 'in(a156)']
+
+
+Projected atoms count: 25
+
+
+Total answer sets found: 1600
+
+⏱️  Performance Profile:
+Entire program                : 8.7880s (100.0%)
+****Facet count time          : 8.6502s (98.4%)
+**FASB execution              : 8.5242s (97.0%)
+Create modified program       : 0.1070s (1.2%)
+**Clingo time                 : 0.0274s (0.3%)
+Generate constraints          : 0.0029s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op1600_projset10_instance3.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op1640_projset6_instance1.lp
+Main started: 2025-10-06 20:09:32.727097
+
+Projected atoms extracted: ['in(a92)', 'in(a2)', 'in(a151)', 'in(a153)', 'in(a11)', 'in(a38)', 'in(a19)', 'in(a25)', 'in(a26)', 'in(a15)', 'in(a67)', 'in(a1)', 'in(a49)', 'in(a129)', 'in(a55)', 'in(a33)', 'in(a34)', 'in(a12)', 'in(a6)']
+
+
+Projected atoms count: 19
+
+
+Total answer sets found: 1640
+
+⏱️  Performance Profile:
+Entire program                : 12.0753s (100.0%)
+****Facet count time          : 11.9332s (98.8%)
+**FASB execution              : 11.8081s (97.8%)
+Create modified program       : 0.1077s (0.9%)
+**Clingo time                 : 0.0293s (0.2%)
+Generate constraints          : 0.0024s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op1640_projset6_instance1.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op17144_projset10_instance3.lp
+Main started: 2025-10-06 20:09:44.827558
+
+Projected atoms extracted: ['in(a3)', 'in(a17)', 'in(a21)', 'in(a22)', 'in(a28)', 'in(a35)', 'in(a36)', 'in(a42)', 'in(a46)', 'in(a47)', 'in(a51)', 'in(a64)', 'in(a69)', 'in(a70)', 'in(a74)', 'in(a76)', 'in(a81)', 'in(a97)', 'in(a102)', 'in(a121)', 'in(a132)', 'in(a138)', 'in(a144)', 'in(a154)', 'in(a156)']
+
+
+Projected atoms count: 25
+
+
+Total answer sets found: 17144
+
+⏱️  Performance Profile:
+Entire program                : 103.1768s (100.0%)
+****Facet count time          : 101.7084s (98.6%)
+**FASB execution              : 100.3944s (97.3%)
+Create modified program       : 1.1291s (1.1%)
+**Clingo time                 : 0.2849s (0.3%)
+Generate constraints          : 0.0310s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op17144_projset10_instance3.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op1780_projset5_instance2.lp
+Main started: 2025-10-06 20:11:28.028195
+
+Projected atoms extracted: ['in(a3)', 'in(a17)', 'in(a21)', 'in(a47)', 'in(a51)', 'in(a64)', 'in(a69)', 'in(a70)', 'in(a76)', 'in(a98)', 'in(a102)', 'in(a104)', 'in(a116)', 'in(a121)', 'in(a133)', 'in(a138)', 'in(a144)', 'in(a156)']
+
+
+Projected atoms count: 18
+
+
+Total answer sets found: 1780
+
+⏱️  Performance Profile:
+Entire program                : 12.2790s (100.0%)
+****Facet count time          : 12.1167s (98.7%)
+**FASB execution              : 11.9791s (97.6%)
+Create modified program       : 0.1169s (1.0%)
+**Clingo time                 : 0.0352s (0.3%)
+Generate constraints          : 0.0027s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op1780_projset5_instance2.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op1920_projset11_instance1.lp
+Main started: 2025-10-06 20:11:40.331509
+
+Projected atoms extracted: ['in(a92)', 'in(a2)', 'in(a151)', 'in(a153)', 'in(a11)', 'in(a38)', 'in(a19)', 'in(a25)', 'in(a26)', 'in(a15)', 'in(a67)', 'in(a49)', 'in(a55)', 'in(a33)', 'in(a34)', 'in(a12)', 'in(a6)', 'in(a19)', 'in(a25)', 'in(a26)', 'in(a43)', 'in(a15)', 'in(a67)', 'in(a18)', 'in(a60)']
+
+
+Projected atoms count: 25
+
+
+Total answer sets found: 1920
+
+⏱️  Performance Profile:
+Entire program                : 10.4148s (100.0%)
+****Facet count time          : 10.2524s (98.4%)
+**FASB execution              : 10.1070s (97.0%)
+Create modified program       : 0.1239s (1.2%)
+**Clingo time                 : 0.0314s (0.3%)
+Generate constraints          : 0.0034s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op1920_projset11_instance1.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op23392_projset10_instance3.lp
+Main started: 2025-10-06 20:11:50.774781
+
+Projected atoms extracted: ['in(a3)', 'in(a17)', 'in(a21)', 'in(a22)', 'in(a28)', 'in(a35)', 'in(a36)', 'in(a42)', 'in(a46)', 'in(a47)', 'in(a51)', 'in(a64)', 'in(a69)', 'in(a70)', 'in(a74)', 'in(a76)', 'in(a81)', 'in(a97)', 'in(a102)', 'in(a121)', 'in(a132)', 'in(a138)', 'in(a144)', 'in(a154)', 'in(a156)']
+
+
+Projected atoms count: 25
+
+
+Total answer sets found: 23392
+
+⏱️  Performance Profile:
+Entire program                : 134.5536s (100.0%)
+****Facet count time          : 132.5816s (98.5%)
+**FASB execution              : 130.8062s (97.2%)
+Create modified program       : 1.5215s (1.1%)
+**Clingo time                 : 0.3868s (0.3%)
+Generate constraints          : 0.0422s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op23392_projset10_instance3.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op264_projset3_instance1.lp
+Main started: 2025-10-06 20:14:05.353951
+
+Projected atoms extracted: ['in(a22)', 'in(a64)', 'in(a70)', 'in(a3)', 'in(a138)', 'in(a17)', 'in(a21)', 'in(a69)', 'in(a51)', 'in(a102)', 'in(a145)']
+
+
+Projected atoms count: 11
+
+
+Total answer sets found: 264
+
+⏱️  Performance Profile:
+Entire program                : 1.7185s (100.0%)
+****Facet count time          : 1.6961s (98.7%)
+**FASB execution              : 1.6775s (97.6%)
+Create modified program       : 0.0154s (0.9%)
+**Clingo time                 : 0.0063s (0.4%)
+Generate constraints          : 0.0003s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op264_projset3_instance1.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op2828_projset8_instance1.lp
+Main started: 2025-10-06 20:14:07.100325
+
+Projected atoms extracted: ['in(a92)', 'in(a2)', 'in(a151)', 'in(a153)', 'in(a11)', 'in(a38)', 'in(a19)', 'in(a25)', 'in(a26)', 'in(a15)', 'in(a67)', 'in(a1)', 'in(a49)', 'in(a129)', 'in(a55)', 'in(a33)', 'in(a34)', 'in(a12)', 'in(a6)', 'in(a19)', 'in(a25)', 'in(a26)', 'in(a43)', 'in(a15)', 'in(a67)', 'in(a18)']
+
+
+Projected atoms count: 26
+
+
+Total answer sets found: 2828
+
+⏱️  Performance Profile:
+Entire program                : 21.3821s (100.0%)
+****Facet count time          : 21.1351s (98.8%)
+**FASB execution              : 20.9154s (97.8%)
+Create modified program       : 0.1891s (0.9%)
+**Clingo time                 : 0.0486s (0.2%)
+Generate constraints          : 0.0049s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op2828_projset8_instance1.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op2_projset12.lp
+Main started: 2025-10-06 20:14:28.506922
+
+Projected atoms extracted: ['in(a92)']
+
+
+Projected atoms count: 1
+
+
+Total answer sets found: 2
+
+⏱️  Performance Profile:
+Entire program                : 0.0167s (100.0%)
+****Facet count time          : 0.0147s (88.0%)
+**FASB execution              : 0.0145s (86.5%)
+**Clingo time                 : 0.0017s (10.2%)
+Create modified program       : 0.0002s (0.9%)
+Extract show atoms            : 0.0001s (0.6%)
+Generate constraints          : 0.0000s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op2_projset12.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op3344_projset5_instancefull.lp
+Main started: 2025-10-06 20:14:28.551678
+
+Projected atoms extracted: ['in(a156)', 'in(a47)', 'in(a116)', 'in(a133)', 'in(a76)', 'in(a98)', 'in(a104)', 'in(a121)', 'in(a64)', 'in(a70)', 'in(a3)', 'in(a138)', 'in(a17)', 'in(a21)', 'in(a69)', 'in(a51)', 'in(a102)', 'in(a144)']
+
+
+Projected atoms count: 18
+
+
+Total answer sets found: 3344
+
+⏱️  Performance Profile:
+Entire program                : 24.9260s (100.0%)
+****Facet count time          : 24.6326s (98.8%)
+**FASB execution              : 24.3785s (97.8%)
+Create modified program       : 0.2180s (0.9%)
+**Clingo time                 : 0.0605s (0.2%)
+Generate constraints          : 0.0051s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op3344_projset5_instancefull.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op3456_projset10_instance3.lp
+Main started: 2025-10-06 20:14:53.502616
+
+Projected atoms extracted: ['in(a3)', 'in(a17)', 'in(a21)', 'in(a22)', 'in(a28)', 'in(a35)', 'in(a36)', 'in(a42)', 'in(a46)', 'in(a47)', 'in(a51)', 'in(a64)', 'in(a69)', 'in(a70)', 'in(a74)', 'in(a76)', 'in(a81)', 'in(a97)', 'in(a102)', 'in(a121)', 'in(a132)', 'in(a138)', 'in(a144)', 'in(a154)', 'in(a156)']
+
+
+Projected atoms count: 25
+
+
+Total answer sets found: 3456
+
+⏱️  Performance Profile:
+Entire program                : 18.8777s (100.0%)
+****Facet count time          : 18.5859s (98.5%)
+**FASB execution              : 18.3304s (97.1%)
+Create modified program       : 0.2214s (1.2%)
+**Clingo time                 : 0.0548s (0.3%)
+Generate constraints          : 0.0062s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op3456_projset10_instance3.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op380_projset5_instance1.lp
+Main started: 2025-10-06 20:15:12.405390
+
+Projected atoms extracted: ['in(a156)', 'in(a47)', 'in(a116)', 'in(a133)', 'in(a76)', 'in(a98)', 'in(a104)', 'in(a121)', 'in(a64)', 'in(a70)', 'in(a3)', 'in(a138)', 'in(a17)', 'in(a21)', 'in(a69)', 'in(a51)', 'in(a102)', 'in(a144)']
+
+
+Projected atoms count: 18
+
+
+Total answer sets found: 380
+
+⏱️  Performance Profile:
+Entire program                : 2.5470s (100.0%)
+****Facet count time          : 2.5106s (98.6%)
+**FASB execution              : 2.4825s (97.5%)
+Create modified program       : 0.0245s (1.0%)
+**Clingo time                 : 0.0080s (0.3%)
+Generate constraints          : 0.0006s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op380_projset5_instance1.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op392_projset4_instance1.lp
+Main started: 2025-10-06 20:15:14.976330
+
+Projected atoms extracted: ['in(a22)', 'in(a64)', 'in(a70)', 'in(a3)', 'in(a138)', 'in(a17)', 'in(a21)', 'in(a69)', 'in(a51)', 'in(a102)', 'in(a144)', 'in(a56)', 'in(a145)']
+
+
+Projected atoms count: 13
+
+
+Total answer sets found: 392
+
+⏱️  Performance Profile:
+Entire program                : 2.5706s (100.0%)
+****Facet count time          : 2.5339s (98.6%)
+**FASB execution              : 2.5041s (97.4%)
+Create modified program       : 0.0255s (1.0%)
+**Clingo time                 : 0.0083s (0.3%)
+Generate constraints          : 0.0005s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op392_projset4_instance1.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op4616_projset11_instance2.lp
+Main started: 2025-10-06 20:15:17.571833
+
+Projected atoms extracted: ['in(a92)', 'in(a2)', 'in(a151)', 'in(a153)', 'in(a11)', 'in(a38)', 'in(a19)', 'in(a25)', 'in(a26)', 'in(a15)', 'in(a67)', 'in(a49)', 'in(a55)', 'in(a33)', 'in(a34)', 'in(a12)', 'in(a6)', 'in(a19)', 'in(a25)', 'in(a26)', 'in(a43)', 'in(a15)', 'in(a67)', 'in(a18)', 'in(a60)']
+
+
+Projected atoms count: 25
+
+
+Total answer sets found: 4616
+
+⏱️  Performance Profile:
+Entire program                : 34.5240s (100.0%)
+****Facet count time          : 34.1135s (98.8%)
+**FASB execution              : 33.7558s (97.8%)
+Create modified program       : 0.3114s (0.9%)
+**Clingo time                 : 0.0778s (0.2%)
+Generate constraints          : 0.0079s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op4616_projset11_instance2.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op4616_projset7_instance1.lp
+Main started: 2025-10-06 20:15:52.120689
+
+Projected atoms extracted: ['in(a92)', 'in(a2)', 'in(a151)', 'in(a153)', 'in(a11)', 'in(a38)', 'in(a19)', 'in(a25)', 'in(a26)', 'in(a15)', 'in(a67)', 'in(a49)', 'in(a55)', 'in(a33)', 'in(a34)', 'in(a12)', 'in(a6)', 'in(a19)', 'in(a25)', 'in(a26)', 'in(a43)', 'in(a15)', 'in(a67)', 'in(a18)', 'in(a60)']
+
+
+Projected atoms count: 25
+
+
+Total answer sets found: 4616
+
+⏱️  Performance Profile:
+Entire program                : 34.1085s (100.0%)
+****Facet count time          : 33.7213s (98.9%)
+**FASB execution              : 33.3758s (97.9%)
+Create modified program       : 0.3001s (0.9%)
+**Clingo time                 : 0.0760s (0.2%)
+Generate constraints          : 0.0077s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op4616_projset7_instance1.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op528_projset3_instance1.lp
+Main started: 2025-10-06 20:16:26.253886
+
+Projected atoms extracted: ['in(a22)', 'in(a64)', 'in(a70)', 'in(a3)', 'in(a138)', 'in(a17)', 'in(a21)', 'in(a69)', 'in(a51)', 'in(a102)', 'in(a145)']
+
+
+Projected atoms count: 11
+
+
+Total answer sets found: 528
+
+⏱️  Performance Profile:
+Entire program                : 3.5642s (100.0%)
+****Facet count time          : 3.5145s (98.6%)
+**FASB execution              : 3.4725s (97.4%)
+Create modified program       : 0.0350s (1.0%)
+**Clingo time                 : 0.0115s (0.3%)
+Generate constraints          : 0.0007s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op528_projset3_instance1.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op576_projset3_instance2.lp
+Main started: 2025-10-06 20:16:29.842253
+
+Projected atoms extracted: ['in(a22)', 'in(a64)', 'in(a70)', 'in(a3)', 'in(a138)', 'in(a17)', 'in(a21)', 'in(a69)', 'in(a51)', 'in(a102)', 'in(a145)']
+
+
+Projected atoms count: 11
+
+
+Total answer sets found: 576
+
+⏱️  Performance Profile:
+Entire program                : 3.6056s (100.0%)
+****Facet count time          : 3.5595s (98.7%)
+**FASB execution              : 3.5172s (97.5%)
+Create modified program       : 0.0348s (1.0%)
+**Clingo time                 : 0.0116s (0.3%)
+Generate constraints          : 0.0007s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op576_projset3_instance2.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op7088_projset10_instance1.lp
+Main started: 2025-10-06 20:16:33.472795
+
+Projected atoms extracted: ['in(a3)', 'in(a17)', 'in(a21)', 'in(a22)', 'in(a28)', 'in(a35)', 'in(a36)', 'in(a42)', 'in(a46)', 'in(a47)', 'in(a51)', 'in(a64)', 'in(a69)', 'in(a70)', 'in(a74)', 'in(a76)', 'in(a81)', 'in(a97)', 'in(a102)', 'in(a121)', 'in(a132)', 'in(a138)', 'in(a144)', 'in(a154)', 'in(a156)']
+
+
+Projected atoms count: 25
+
+
+Total answer sets found: 7088
+
+⏱️  Performance Profile:
+Entire program                : 47.8919s (100.0%)
+****Facet count time          : 47.2906s (98.7%)
+**FASB execution              : 46.7662s (97.6%)
+Create modified program       : 0.4570s (1.0%)
+**Clingo time                 : 0.1171s (0.2%)
+Generate constraints          : 0.0124s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op7088_projset10_instance1.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op7152_projset9_instance1.lp
+Main started: 2025-10-06 20:17:21.391683
+
+Projected atoms extracted: ['in(a156)', 'in(a47)', 'in(a35)', 'in(a36)', 'in(a76)', 'in(a81)', 'in(a121)', 'in(a154)', 'in(a132)', 'in(a75)', 'in(a28)', 'in(a42)', 'in(a46)', 'in(a74)', 'in(a97)', 'in(a22)', 'in(a64)', 'in(a70)', 'in(a3)', 'in(a138)', 'in(a17)', 'in(a21)', 'in(a69)', 'in(a51)', 'in(a102)', 'in(a144)']
+
+
+Projected atoms count: 26
+
+
+Total answer sets found: 7152
+
+⏱️  Performance Profile:
+Entire program                : 52.7897s (100.0%)
+****Facet count time          : 52.1694s (98.8%)
+**FASB execution              : 51.6374s (97.8%)
+Create modified program       : 0.4658s (0.9%)
+**Clingo time                 : 0.1177s (0.2%)
+Generate constraints          : 0.0129s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op7152_projset9_instance1.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op8_projset1.lp
+Main started: 2025-10-06 20:18:14.207407
+
+Projected atoms extracted: ['in(a15)', 'in(a14)', 'in(a17)', 'in(a16)', 'in(a19)', 'in(a18)']
+
+
+Projected atoms count: 6
+
+
+Total answer sets found: 8
+
+⏱️  Performance Profile:
+Entire program                : 0.0420s (100.0%)
+****Facet count time          : 0.0401s (95.4%)
+**FASB execution              : 0.0392s (93.5%)
+**Clingo time                 : 0.0012s (2.8%)
+Create modified program       : 0.0007s (1.6%)
+Extract show atoms            : 0.0001s (0.2%)
+Generate constraints          : 0.0000s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/af_st_expanded_op8_projset1.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op14_projset1_move29.lp
+Main started: 2025-10-06 20:18:14.274004
+
+Projected atoms extracted: ['put(13,15,18)', 'put(11,20,21)', 'put(24,20,21)', 'put(12,20,21)', 'put(7,13,14)', 'put(21,3,20)', 'put(20,3,21)']
+
+
+Projected atoms count: 7
+
+
+Total answer sets found: 14
+
+⏱️  Performance Profile:
+Entire program                : 92.1433s (100.0%)
+****Facet count time          : 59.1600s (64.2%)
+**FASB execution              : 59.1579s (64.2%)
+**Clingo time                 : 32.9804s (35.8%)
+Create modified program       : 0.0016s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Generate constraints          : 0.0000s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op14_projset1_move29.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op22_projset1_move29.lp
+Main started: 2025-10-06 20:19:46.442946
+
+Projected atoms extracted: ['put(13,15,18)', 'put(11,20,21)', 'put(12,20,21)', 'put(7,13,14)', 'put(21,3,20)', 'put(23,19,20)', 'put(20,3,21)', 'put(24,20,21)', 'put(6,13,14)', 'put(25,20,21)', 'put(25,3,10)', 'put(20,4,21)']
+
+
+Projected atoms count: 12
+
+
+Total answer sets found: 22
+
+⏱️  Performance Profile:
+Entire program                : 44.3911s (100.0%)
+**Clingo time                 : 28.8254s (64.9%)
+****Facet count time          : 15.5623s (35.1%)
+**FASB execution              : 15.5589s (35.0%)
+Create modified program       : 0.0027s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Generate constraints          : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op22_projset1_move29.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op28_projset1_move29.lp
+Main started: 2025-10-06 20:20:30.862593
+
+Projected atoms extracted: ['put(13,15,18)', 'put(11,20,21)', 'put(12,20,21)', 'put(7,13,14)', 'put(21,3,20)', 'put(23,19,20)', 'put(20,3,21)', 'put(24,20,21)', 'put(6,13,14)', 'put(25,20,21)', 'put(25,3,10)', 'put(20,4,21)', 'put(20,17,18)', 'put(19,4,21)', 'put(19,17,18)', 'put(12,14,15)']
+
+
+Projected atoms count: 16
+
+
+Total answer sets found: 28
+
+⏱️  Performance Profile:
+Entire program                : 29.1970s (100.0%)
+**Clingo time                 : 21.7693s (74.6%)
+****Facet count time          : 7.4238s (25.4%)
+**FASB execution              : 7.4197s (25.4%)
+Create modified program       : 0.0034s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Generate constraints          : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op28_projset1_move29.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op3_projset1_move29.lp
+Main started: 2025-10-06 20:21:00.085988
+
+Projected atoms extracted: ['put(13,15,18)', 'put(11,20,21)']
+
+
+Projected atoms count: 2
+
+
+Total answer sets found: 3
+
+⏱️  Performance Profile:
+Entire program                : 29.0413s (100.0%)
+****Facet count time          : 21.2724s (73.2%)
+**FASB execution              : 21.2719s (73.2%)
+**Clingo time                 : 7.7665s (26.7%)
+Create modified program       : 0.0004s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Generate constraints          : 0.0000s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op3_projset1_move29.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op40_projset1_move29.lp
+Main started: 2025-10-06 20:21:29.157720
+
+Projected atoms extracted: ['put(13,15,18)', 'put(11,20,21)', 'put(12,20,21)', 'put(7,13,14)', 'put(21,3,20)', 'put(23,19,20)', 'put(20,3,21)', 'put(24,20,21)', 'put(6,13,14)', 'put(25,20,21)', 'put(25,3,10)', 'put(20,4,21)', 'put(20,17,18)', 'put(19,4,21)', 'put(19,17,18)', 'put(12,14,15)', 'put(12,15,18)', 'put(11,19,20)', 'put(14,10,17)', 'put(20,3,10)', 'put(21,9,21)', 'put(22,10,20)', 'put(23,18,19)', 'put(24,19,20)', 'put(25,4,9)', 'put(25,20,21)', 'put(8,15,20)']
+
+
+Projected atoms count: 27
+
+
+Total answer sets found: 40
+
+⏱️  Performance Profile:
+Entire program                : 33.1538s (100.0%)
+**Clingo time                 : 27.8580s (84.0%)
+****Facet count time          : 5.2912s (16.0%)
+**FASB execution              : 5.2855s (15.9%)
+Create modified program       : 0.0047s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Generate constraints          : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op40_projset1_move29.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op50_projset1_move29.lp
+Main started: 2025-10-06 20:22:02.347487
+
+Projected atoms extracted: ['put(13,15,18)', 'put(11,20,21)', 'put(12,20,21)', 'put(7,13,14)', 'put(21,3,20)', 'put(23,19,20)', 'put(20,3,21)', 'put(24,20,21)', 'put(6,13,14)', 'put(25,20,21)', 'put(25,3,10)', 'put(20,4,21)', 'put(20,17,18)', 'put(19,4,21)', 'put(19,17,18)', 'put(12,14,15)', 'put(12,15,18)', 'put(11,19,20)', 'put(14,10,17)', 'put(20,3,10)', 'put(21,9,21)', 'put(22,10,20)', 'put(23,18,19)', 'put(24,19,20)', 'put(25,4,9)', 'put(25,20,21)', 'put(8,15,20)', 'put(7,14,15)', 'put(6,13,14)', 'put(13,20,21)', 'put(15,17,18)', 'put(16,15,16)', 'put(17,3,18)']
+
+
+Projected atoms count: 33
+
+
+Total answer sets found: 50
+
+⏱️  Performance Profile:
+Entire program                : 37.4457s (100.0%)
+**Clingo time                 : 31.3516s (83.7%)
+****Facet count time          : 6.0887s (16.3%)
+**FASB execution              : 6.0816s (16.2%)
+Create modified program       : 0.0059s (0.0%)
+Extract show atoms            : 0.0002s (0.0%)
+Generate constraints          : 0.0002s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op50_projset1_move29.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op61_projset1_move29.lp
+Main started: 2025-10-06 20:22:39.820631
+
+Projected atoms extracted: ['put(13,15,18)', 'put(11,20,21)', 'put(12,20,21)', 'put(7,13,14)', 'put(21,3,20)', 'put(23,19,20)', 'put(20,3,21)', 'put(24,20,21)', 'put(6,13,14)', 'put(25,20,21)', 'put(25,3,10)', 'put(20,4,21)', 'put(20,17,18)', 'put(19,4,21)', 'put(19,17,18)', 'put(12,14,15)', 'put(12,15,18)', 'put(11,19,20)', 'put(14,10,17)', 'put(20,3,10)', 'put(21,9,21)', 'put(22,10,20)', 'put(23,18,19)', 'put(24,19,20)', 'put(25,4,9)', 'put(25,20,21)', 'put(8,15,20)', 'put(7,14,15)', 'put(6,13,14)', 'put(11,20,21)', 'put(8,4,21)', 'put(9,15,20)', 'put(8,15,21)', 'put(7,4,21)']
+
+
+Projected atoms count: 34
+
+
+Total answer sets found: 61
+
+⏱️  Performance Profile:
+Entire program                : 55.7624s (100.0%)
+**Clingo time                 : 48.1589s (86.4%)
+****Facet count time          : 7.5978s (13.6%)
+**FASB execution              : 7.5888s (13.6%)
+Create modified program       : 0.0076s (0.0%)
+Generate constraints          : 0.0002s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op61_projset1_move29.lp
+----------------------------------------
+Processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op8_projset1_move29.lp
+Main started: 2025-10-06 20:23:35.609596
+
+Projected atoms extracted: ['put(13,15,18)', 'put(11,20,21)', 'put(12,20,21)', 'put(7,13,14)', 'put(21,3,20)']
+
+
+Projected atoms count: 5
+
+
+Total answer sets found: 8
+
+⏱️  Performance Profile:
+Entire program                : 64.4690s (100.0%)
+****Facet count time          : 47.2911s (73.4%)
+**FASB execution              : 47.2899s (73.4%)
+**Clingo time                 : 17.1752s (26.6%)
+Create modified program       : 0.0009s (0.0%)
+Extract show atoms            : 0.0001s (0.0%)
+Generate constraints          : 0.0000s (0.0%)
+Finished processing file: /home/crysp-power/anirban/clingo/epasufr/src/../input_instance/Hanoi_op8_projset1_move29.lp
+----------------------------------------

@@ -610,6 +610,7 @@ def main(projected_file, limit_type=None, limit_value=None):
                     print(f"\n⏰ Time limit of {limit_value} seconds reached")
                     break              
             answer_set = model.symbols(shown=True)
+            record_profile("**Clingo time")
             #print("answer_set:",answer_set)
             if answer_set:    
                 ans_idx= ans_idx + 1             
@@ -635,7 +636,7 @@ def main(projected_file, limit_type=None, limit_value=None):
                     all_filtered_in_atoms.append(filtered_in_atoms)
                     all_filtered_ex_atoms.append(filtered_ex_atoms)
                     all_ans_facets.append(facet_list)            
-            #start_profile("**Clingo time")        
+            start_profile("**Clingo time")        
     # End of solving            
     #record_profile("Answer set processing")                        
     #record_profile("**Clingo time")
@@ -643,7 +644,7 @@ def main(projected_file, limit_type=None, limit_value=None):
     #     print("No answer sets found with the specified projected atoms.")
     #     return  
     # else:
-        record_profile("**Clingo time")
+    record_profile("**Clingo time")
     print(f"\nTotal answer sets found: {ans_idx}")
 
 

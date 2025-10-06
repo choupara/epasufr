@@ -1,62 +1,177 @@
-% ===== INSTANCE FILE (restaurant_instance.lp) =====
-% Available menu items
-dish(pizza).
-dish(burger).
-dish(salad).
+% Initial state:
+% A: 1 2 3 4 5 6 9 10 11 
+% B: 7 
+% C: 12 13 14 15 16 17 
+% D: 8 
 
-% Available drinks  
-drink(coke).
-drink(water).
-drink(juice).
+% Terminal state:
+% A: 1 2 3 
+% B: 7 8 9 10 11 12 13 14 15 16 17 
+% C: 4 
+% D: 5 6 
 
-% Dish prices
-dish_price(pizza, 15).
-dish_price(burger, 12).
-dish_price(salad, 8).
+% 40 initial moves skipped.
+% 29 move solution.
+steps(29).
+time(0).
+time(1).
+time(2).
+time(3).
+time(4).
+time(5).
+time(6).
+time(7).
+time(8).
+time(9).
+time(10).
+time(11).
+time(12).
+time(13).
+time(14).
+time(15).
+time(16).
+time(17).
+time(18).
+time(19).
+time(20).
+time(21).
+time(22).
+time(23).
+time(24).
+time(25).
+time(26).
+time(27).
+time(28).
+time(29).
+disk(1).
+disk(2).
+disk(3).
+disk(4).
+disk(5).
+disk(6).
+disk(7).
+disk(8).
+disk(9).
+disk(10).
+disk(11).
+disk(12).
+disk(13).
+disk(14).
+disk(15).
+disk(16).
+disk(17).
+disk(18).
+disk(19).
+disk(20).
+disk(21).
 
-% Drink prices
-drink_price(coke, 3).
-drink_price(water, 1).
-drink_price(juice, 4).
+on0(5,1).
+on0(6,5).
+on0(7,6).
+on0(8,7).
+on0(9,8).
+on0(10,9).
+on0(13,10).
+on0(14,13).
+on0(15,14).
+on0(11,2).
+on0(16,3).
+on0(17,16).
+on0(18,17).
+on0(19,18).
+on0(20,19).
+on0(21,20).
+on0(12,4).
 
 
-% ===== ENCODING FILE (restaurant_encoding.lp) =====
-% Each customer must order exactly one dish
-1 { order_dish(D) : dish(D) } 1.
-
-% Each customer must order exactly one drink
-1 { order_drink(Dr) : drink(Dr) } 1.
-
-% Calculate dish cost based on what was ordered
-dish_cost(Price) :- order_dish(D), dish_price(D, Price).
-
-% Calculate drink cost based on what was ordered
-drink_cost(Price) :- order_drink(Dr), drink_price(Dr, Price).
-
-% Total cost calculation
-total_cost(Total) :- dish_cost(DC), drink_cost(DrC), Total = DC + DrC.
-
-% Cost categories for business analysis
-cost_category(budget) :- total_cost(Total), Total <= 11.
-cost_category(moderate) :- total_cost(Total), Total > 11, Total <= 15.
-cost_category(premium) :- total_cost(Total), Total > 15.
-
-% Customer satisfaction based on order combination
-%satisfied :- order_dish(pizza), order_drink(coke).
-%satisfied :- order_dish(salad), order_drink(water).
-
-% Project only the cost category - this hides all order details!
-%#project cost_category(premium).
-%#project cost_category(moderate).
-%#project cost_category/1.
-
-#show cost_category/1.
-
-%#show total_cost/1.
-#show order_dish/1.
-#show order_drink/1.
+% Terminal State: 
+ongoal(5,1).
+ongoal(6,5).
+ongoal(7,6).
+ongoal(11,2).
+ongoal(12,11).
+ongoal(13,12).
+ongoal(14,13).
+ongoal(15,14).
+ongoal(16,15).
+ongoal(17,16).
+ongoal(18,17).
+ongoal(19,18).
+ongoal(20,19).
+ongoal(21,20).
+ongoal(8,3).
+ongoal(9,4).
+ongoal(10,9).
 
 
-:- cost_category(premium).
-:- cost_category(moderate).
-:- not cost_category(budget).
+% The meaning of the time predicate is self-evident. As for the disk
+% predicate, there are k disks 1,2,...,k. Disks 1, 2, 3, 4 denote pegs. 
+% Disks 5, ... are "movable". The larger the number of the disk, 
+% the "smaller" it is.
+%
+% The program uses additional predicates:
+% on(T,N,M), which is true iff at time T, disk M is on disk N
+% move(t,N), which is true iff at time T, it is disk N that will be
+% moved
+% where(T,N), which is true iff at time T, the disk to be moved is moved
+% on top of the disk N.
+% goal, which is true iff the goal state is reached at time t
+% steps(T), which is the number of time steps T, required to reach the goal (provided part of Input data)
+
+% Read in data 
+ 	on(0,N1,N) :- on0(N,N1).
+    onG(K,N1,N) :- ongoal(N,N1), steps(K).
+		   
+% Specify valid arrangements of disks
+ 	% Basic condition. Smaller disks are on larger ones
+ 	:- time(T), on(T,N1,N), N1>=N.
+ 	
+% Specify a valid move (only for T<t)
+ 	% pick a disk to move
+    %move(T,N) | noMove(T,N) :- disk(N), time(T), steps(K), T<K.
+    %:- move(T,N1), move(T,N2), N1 != N2.
+    %:- time(T), steps(K), T<K, not diskMoved(T).
+    %diskMoved(T) :- move(T,Fv1).
+	1 { move(T,N) : disk(N) } 1 :- time(T), steps(K), T<K.
+
+ 	% pick a disk onto which to move
+    %where(T,N) | noWhere(T,N) :- disk(N), time(T), steps(K), T<K.
+    %:- where(T,N1), where(T,N2), N1 != N2.
+    %:- time(T), steps(K), T<K, not diskWhere(T).
+    %diskWhere(T) :- where(T,Fv1).
+	1 { where(T,N) : disk(N) } 1 :- time(T), steps(K), T<K.
+
+ 	% pegs cannot be moved
+ 	:- move(T,N), N<5.
+
+ 	% only top disk can be moved
+ 	:- on(T,N,N1), move(T,N).
+
+ 	% a disk can be placed on top only.
+ 	:- on(T,N,N1), where(T,N).
+
+ 	% no disk is moved in two consecutive moves
+ 	:- move(T,N), move(TM1,N), TM1=T-1.
+
+% Specify effects of a move
+ 	on(TP1,N1,N) :- move(T,N), where(T,N1), TP1=T+1.
+
+ 	on(TP1,N,N1) :- time(T), steps(K), T<K,
+ 	                on(T,N,N1), not move(T,N1), TP1=T+1.
+
+% Goal description
+	 :- not on(K,N,N1), onG(K,N,N1), steps(K).
+	 :- on(K,N,N1), not onG(K,N,N1),steps(K).
+
+% Solution
+	 put(T,M,N) :- move(T,N), where(T,M), steps(K), T<K.
+
+	 #show put/3.
+
+
+
+:- not put(13,15,18).
+:- not put(11,20,21).
+:- not put(7,13,14).
+:- not put(21,3,20).
+:- put(12,20,21).
